@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-8">
-                <h1> Git </h1>
+                <h1> Git - What is it? </h1>
                 <p>
                     According to <a href="https://git-scm.com">git-scm.com</a>, "Git is a free and open-source
                     distributed
@@ -12,12 +12,24 @@
                     efficiency". An in-progress, or completed, project's code can be stored in a
                     <a href="https://github.com/">GitHub</a> repository for proper management and version control of the
                     source
-                    code. Git is regarded as the dominant source code management software (SCM) at this time.
+                    code. Git is regarded as the dominant source code management software (SCM) at this time. It was
+                    initially designed and developed by <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus
+                    Torvalds</a> for Linux kernel development in 2005.
                 </p>
                 <p>
                     Version control systems, like Git, allow individuals or groups to work on a project while
                     providing all of the tools necessary to ensure that no mishaps take place in the code that could
                     interfere with someone else's work or break the entire project.
+                </p>
+                <p>
+                    In the sections below I will go into detail about Git regarding:
+                <ul>
+                    <li>Repositories</li>
+                    <li>Branches</li>
+                    <li>Tags</li>
+                    <li>Commits</li>
+                    <li>Merges</li>
+                </ul>
                 </p>
             </div>
             <div class="col-4">
@@ -31,7 +43,27 @@
             <div class="col-8">
                 <h3>Repositories</h3>
                 <p>
-
+                    A GitHub repository is the online home for the source code of a project. Any user can create a
+                    GitHub account, which will then allow them to make repositories on the GitHub website. These can be
+                    set to Public or Private view, as dictated by the user when making a new repository. The
+                    <a href="https://www.geeksforgeeks.org/what-is-a-git-repository/">GeeksForGeeks website</a>
+                    describes GitHub repositories as, "a collection of files of various different versions of a
+                    Project...A GIT repository allows performing various operations on it to create different versions
+                    of a project. These operations include the addition of files, creating new repositories, committing
+                    an action, deleting a repository, etc."
+                </p>
+                <p>
+                    A repository is a project that is stored and worked off of by a
+                    team. The functions of the repository allow for proper version control and testing of code before it
+                    is considered finalized. Source code can be pulled down from a repository by a user and then updated
+                    on their own time. Repositories also allow source code to be safely updated by managing the uploads
+                    of new branches/work from team members in real time.
+                </p>
+                <p>
+                    Repositories offer many different tools and functions through GitHub for testing and managing your
+                    source code. Integrating your code into a development or production environment, testing to ensure
+                    compatability with Master branch and other web apps, and scanning for any errors that may have been
+                    missed are all available via GitHub Repositories.
                 </p>
             </div>
         </div>
@@ -46,7 +78,7 @@
                     version
                     of
                     the code from which everyone works from. Branches allow a team to break off into specific groups and
-                    work on different aspects of the project while ensuring that the entire project itself continues to
+                    work on different aspects of a project while ensuring that the entire project itself continues to
                     function as intended.
                 </p>
                 <p>
@@ -64,7 +96,8 @@
                     to work from on their own machine. This is the team member's Local Master branch. The team member
                     will then access this
                     code file and, either using console commands or a text editor, create a new branch to begin
-                    working from locally. This new local branch is separated from the Master branch, and it ensures that any updates made to the code won't
+                    working from locally. This new local branch is separated from the Master branch, and it ensures that
+                    any updates made to the code won't
                     interfere with the Master branch until it is ready to be merged (see section on Merge).
                 </p>
                 <p>
@@ -84,11 +117,72 @@
                 <h5>Remote Branches</h5>
                 <p>
                     A Remote branch is a team member's local branch, of the same name, that has been pushed to the
-                    online GitHub repository. The
-                    work that the team member did on their local machine is now placed in the online GitHub repository
-                    as a new branch for the
-                    project, separate from Master. It will stay separated with the updates that were made until reviewed
-                    and approved to merge with the remote Master branch.
+                    online GitHub repository. The updates that were made to the local branch will be visible as a
+                    new remote branch for the team to see and work with in the online repository. It will stay separated
+                    from the
+                    Master branch until it is reviewed and approved to merge.
+                </p>
+                <p>
+                    Remote branches are extremely beneficial to the version control process because the Master branch
+                    remains safe even after a team member pushes their changes to the online repository. Code review and
+                    any further testing that is necessary can take place one final time in this stage. Once everything
+                    in the new Remote branch has been confirmed as correct, functional, and not in conflict with the
+                    Master branch, a merge can take place.
+                </p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-8">
+                <h3>Tags</h3>
+                <p>
+                    Tag 1
+                </p>
+                <p>
+                    Tag 2
+                </p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-8">
+                <h3>Commits</h3>
+                <p>
+                    Commits are essentially save points in a project that are made as work is being done. They are
+                    the changes to a code file, or set of files, that get saved within the branch that is being worked
+                    in at the time of commit. When a commit is made a unique ID is assigned to the change, or set of
+                    changes, that allows detailed records to be kept. In this way it is made clear what exact changes
+                    were incorporated to each file, at what time they were made, and who made them.
+                    Commits should always contain a commit message, which is a brief description of what changes were
+                    made by the user for everyone to review.
+                </p>
+                <p>
+                    Good commits are essential to the ease of work for a team. A good commit not only means working on
+                    the correct file and branch for a project, but it also means that commit messages are clear and concise.
+                    Additionally, good commits should not be overly burdensome for the team. It is much easier to review
+                    consecutive, small changes than it is to review massive amounts of changes across multiple different
+                    files within a project.
+                </p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-8">
+                <h3>Merges</h3>
+                <p>
+                    Merging in Git is when you join two or more development histories together into one branch
+                    of the project. Commits in the separate histories, or branches, will be incorporated
+                    into the Master branch most often when a merge request is completed, from my experience. Merging can
+                    take place within the GitHub repository for the project itself via simple interface options that
+                    will be presented upon a new remote branch upload.
+                </p>
+                <p>
+                    Merges are a vital step in the development workflow for coding projects. They allow a team to safely
+                    work off of each other's updates on a project, up to the point of last merge. What does
+                    this mean? As each team member is locally-updating, testing, pushing, and then merging their
+                    work into the Master branch of a project on a remote repository, each team member can be assured
+                    that they are not working
+                    off of old code that may be missing latest features or updates. This is just another way to ensure
+                    that no individual changes to files interrupt or break the entire project as everyone should be
+                    working
+                    off of the latest files.
                 </p>
             </div>
         </div>
