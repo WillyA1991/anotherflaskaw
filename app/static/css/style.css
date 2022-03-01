@@ -12,3 +12,7 @@ body {
 .makebigger {
     font-size: 150%;
 }
+
+.bold {
+    font-weight: bold;
+}
