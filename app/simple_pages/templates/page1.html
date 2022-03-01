@@ -4,13 +4,20 @@
         <div class="row">
             <div class="col-8">
                 <h1> Git </h1>
-                Git is a free and open-source distributed version control system designed to handle
-                everything from small to very large projects with speed and efficiency. An in-progress, or completed,
-                project's code can be stored in a <span class="bold">GitHub</span> repository for proper management and
-                version-control of the source code. Git is regarded as the dominant source code management software (SCM)
-                at this time.
-                <p class="mt-4">
-                    <span class="makebigger">Branches</span>
+                <p>
+                    According to <a href="https://git-scm.com">git-scm.com</a>, "Git is a free and open-source
+                    distributed
+                    version
+                    control system designed to handle everything from small to very large projects with speed and
+                    efficiency". An in-progress, or completed, project's code can be stored in a
+                    <a href="https://github.com/">GitHub</a> repository for proper management and version control of the
+                    source
+                    code. Git is regarded as the dominant source code management software (SCM) at this time.
+                </p>
+                <p>
+                    Version control systems, like Git, allow individuals or groups to work on a project while
+                    providing all of the tools necessary to ensure that no mishaps take place in the code that could
+                    interfere with someone else's work or break the entire project.
                 </p>
             </div>
             <div class="col-4">
@@ -19,19 +26,71 @@
                     GITHUB
                 </p>
             </div>
-            <p>
-                Merge
-            </p>
-            <p>
-                Commit
-            </p>
-            <p>
-                Tags
-            </p>
-            <p>
-                Repositories
-            </p>
         </div>
-    </div>
+        <div class="row mt-3">
+            <div class="col-8">
+                <h3>Repositories</h3>
+                <p>
+
+                </p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-8">
+                <h3>Branches</h3>
+                <p>
+                    Branches are a function of Git that allow the user to preserve the integrity of their project while
+                    updates are made. Branches function by tracking all changes to the source code <span class="bold">Main or Master branch,
+                    also known as the
+                    "source of truth"</span>. The Master branch of the project is always treated as the most up-to-date
+                    version
+                    of
+                    the code from which everyone works from. Branches allow a team to break off into specific groups and
+                    work on different aspects of the project while ensuring that the entire project itself continues to
+                    function as intended.
+                </p>
+                <p>
+                    For example: What if one person needed to create a new feature, such as a side
+                    navigation bar on an interior page, while another person needed to update hyperlink treatments on a
+                    separate interior page? Branches allow those team members to work simultaneously without
+                    jeopardizing the overall project code! The steps involved in working with branches are rather
+                    simple. Team members will have both <span class="bold">local branches</span> and
+                    <span class="bold">remote branches</span> from which they work from.
+                </p>
+                <h5>Local Branches</h5>
+                <p>
+                    After a team member pulls down the latest Master
+                    branch from the repository that is the source of truth, they will have the latest and greatest code
+                    to work from on their own machine. This is the team member's Local Master branch. The team member
+                    will then access this
+                    code file and, either using console commands or a text editor, create a new branch to begin
+                    working from locally. This new local branch is separated from the Master branch, and it ensures that any updates made to the code won't
+                    interfere with the Master branch until it is ready to be merged (see section on Merge).
+                </p>
+                <p>
+                    The Master branch that now lives on their machine, as
+                    well as the new branch that they
+                    created to work from, are both Local branches. They are not connected to the repository that
+                    the whole team has access to. Local branches are saved only to the team member's machine.
+                </p>
+                <p>
+                    The team member can make as many local branches as they need to when making updates to the project.
+                    When they are done making changes in a local branch the team member can test the code as needed to
+                    ensure
+                    compatability as well as functionality with the Master branch. After this is completed with
+                    positive results, the
+                    local branch is then ready to be pushed to the remote branch, which lives in the remote repository.
+                </p>
+                <h5>Remote Branches</h5>
+                <p>
+                    A Remote branch is a team member's local branch, of the same name, that has been pushed to the
+                    online GitHub repository. The
+                    work that the team member did on their local machine is now placed in the online GitHub repository
+                    as a new branch for the
+                    project, separate from Master. It will stay separated with the updates that were made until reviewed
+                    and approved to merge with the remote Master branch.
+                </p>
+            </div>
+        </div>
     </div>
 {% endblock %}
