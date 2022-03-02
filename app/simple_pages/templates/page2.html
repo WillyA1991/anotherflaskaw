@@ -15,7 +15,7 @@
                 <ul>
                     <li>Containers</li>
                     <li>Images</li>
-                    <li>Docker commands</li>
+                    <li>Docker process & terminal commands</li>
                 </ul>
                 </p>
             </div>
@@ -29,7 +29,9 @@
                 <p>
                     <span class="bold">Containers</span> are standardized units
                     of software that package up code and all their dependencies for the user so that applications can
-                    run quickly and smoothly from one environment to another. They are the live, runnable instances of
+                    run quickly and smoothly from one environment to another. They are processes on your machine that
+                    are isolated from all other processes on the host machine, and can be run on any O.S. They are the
+                    live, runnable instances of
                     an image -
                     more on those below.
                 </p>
@@ -75,7 +77,103 @@
         </div>
         <div class="row mt-3">
             <div class="col-8">
-                <h3>DOCKER COMMANDS</h3>
+                <h3>DOCKER PROCESS & TERMINAL COMMANDS</h3>
+                <p>
+                    Although Docker is a functional platform that can easily integrate into a text editor such as
+                    Pycharm for ease of use, it also has a variety commands that can be utilized directly via a
+                    terminal. Below is a step-by-step guide to accessing and running an application with Docker
+                    commands, using this web application as an
+                    example:
+                <ol>
+                    <li>Ensure that Docker has been installed on your local machine so that the commands provided will
+                        operate correctly
+                    </li>
+                    <li>From the command line of choice, enter <b>< docker pull
+                        austinwilly14/projectsetupflaskbase:master ></b></li>
+                    <li>After the process has finished, enter <b>< docker images ></b> to see a list of images that are
+                        available on your host machine. If you see the new image listed, you know it worked!
+                    </li>
+                    <li>After this has been confirmed, use the command line to navigate to the directory where the image and all its relevant files were stored on your local machine</li>
+                    <li>Next, we will compose and run the container for this newly pulled image. Enter <b>< docker-compose up -d ></b> in the appropriate directory</li>
+                    <li>A few moments will pass while the process completes and runs the new container</li>
+                    <li>Enter <b>< docker ps ></b> to see the list of active containers, which should now include the one that was just composed</li>
+                    <li>If all looks as it should, open your browser and enter into the URL bar <b>< localhost:80 ></b></li>
+                    <li>Voila! This web-based application should now be hosted and visible on your local machine in all its glory!</li>
+                </ol>
+                </p>
+                <p>
+                    Below is a non-comprehensive list of Docker commands that can be used in a
+                    terminal such as Command Prompt, Git Bash, Windows Powershell, or the Ubuntu app:
+                <ul>
+                    <li class="mb-2"><b>docker version</b> = will show the currently installed version of docker
+                        that is being utilized by the user
+                    </li>
+                    <li class="mb-2"><b>docker, or docker help</b> = will list available docker commands for the user to
+                        review
+                    </li>
+                    <li class="mb-2"><b>docker build</b> = builds docker images from a dockerfile in a specific folder
+                        location or a directly-specified location, like GitHub repositories or URLs
+                    </li>
+                    <li class="mb-2"><b>docker run [image name]</b> = will create a new container from an image,
+                        specifically named, that has been pulled from DockerHub. Adding a "-dp" to this line adds new
+                        arguments to the command. "-d" will run the container you started in detached mode, or in the
+                        background so that it doesn't take up space in your terminal screen. "-p" is used to map the
+                        ports for the container image, so "-p 80:80" would map port 80 of the host to port 80 in the
+                        container
+                    </li>
+                    <li class="mb-2"><b>docker stop [container id]</b> = will stop the specifically named
+                        container from running
+                    </li>
+                    <li class="mb-2"><b>docker kill [container id]</b> = will stop the specifically named
+                        container from running immediately, not allowing for proper shutdown procedures that "stop"
+                        would
+                    </li>
+                    <li class="mb-2"><b>docker start [container id]</b> = will start a container will all previous
+                        changes intact
+                    </li>
+                    <li class="mb-2"><b>docker-compose</b> = will define, run, and share multi-container Docker
+                        applications.
+                        Once properly prepared, this single command will create and start all the services in your
+                        configuration, or tear them all down. This is specified via "docker-compose up" or
+                        "docker-compose down" in the command line
+                    </li>
+                    <li class="mb-2"><b>docker push [online repository information]</b> = will push an image or
+                        repository to an online registry, like
+                        DockerHub
+                    </li>
+                    <li class="mb-2"><b>docker pull [image name]</b> = will pull down the specifically named image
+                        from the Docker Repository, DockerHub, to the user's machine
+                    </li>
+                    <li class="mb-2"><b>docker ps</b> = will show a list of all running containers and their
+                        metadata information, such as Container ID, Image that is being used, when it was created, how
+                        long it has been active, and what ports the container is mapped to
+                    </li>
+                    <li class="mb-2"><b>docker ps -a</b> = similar but different to the above, this will show a
+                        list of all running <i>and</i> exited containers
+                    </li>
+                    <li class="mb-2"><b>docker images</b> = will show a list of images on the user's docker platform
+                    </li>
+                    <li class="mb-2"><b>docker image history [image name]</b> = will produce an output of what makes up
+                        the specified image. It will display the command that was used to create each layer of the image
+                    </li>
+                    <li class="mb-2"><b>docker scan [image name]</b> = will utilize the <a
+                            href="https://snyk.io/">Snyk</a> vulnerability scanning service to scan your specified image
+                        for vulnerabilities
+                    </li>
+                    <li class="mb-2"><b>docker volume create</b> = will create a volume for the container to persist its
+                        data through
+                    </li>
+                    <li class="mb-2"><b>docker network create</b> = will create a network for multiple containers to
+                        communicate with one another
+                    </li>
+                    <li class="mb-2"><b>docker exec [container id] [user command]</b> = will run a command, specified by
+                        the user, in a running container
+                    </li>
+                    <li class="mb-2"><b>docker tag [image id]</b> = will give a new name to the specified image</li>
+                    <li class="mb-2"><b>docker rm [container id]</b> = will remove one or more containers</li>
+                    <li class="mb-2"><b>docker rmi [image id]</b> = will remove one or more images</li>
+                </ul>
+                </p>
             </div>
         </div>
     </div>
