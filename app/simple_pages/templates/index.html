@@ -1,68 +1,71 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
-    <div class="row border border-primary mb-3">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{{ url_for('static', filename='images/Highlander.png') }}" class="d-block w-100" alt="...">
+    <div class="container">
+        <div class="row border border-primary mb-3">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="page1"><img src="{{ url_for('static', filename='images/GitIndex.png') }}"
+                                             class="d-block w-100" alt="Git"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="page2"><img src="{{ url_for('static', filename='images/DockerIndex.png') }}"
+                                             class="d-block w-100" alt="Docker"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="page3"><img src="{{ url_for('static', filename='images/FlaskIndex.png') }}"
+                                             class="d-block w-100" alt="Python/Flask"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="page4"><img src="{{ url_for('static', filename='images/CICDIndex.png') }}"
+                                             class="d-block w-100" alt="CI/CD"></a>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="{{ url_for('static', filename='images/hellocloud.jpeg') }}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ url_for('static', filename='images/Firework.jpeg') }}" class="d-block w-100" alt="...">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">About ME</h5>
+                        <h6 class="card-subtitle mb-2 text-muted"></h6>
+                        <p class="card-text">Learn about the man who made this application in just a few short words.</p>
+                        <a href="about" class="card-link">CLICK HERE</a>
+                    </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">GIT And Its Wonders</h5>
+                        <h6 class="card-subtitle mb-2 text-muted"></h6>
+                        <p class="card-text">An abbreviated summary of some of Git's functions and how they can be used.</p>
+                        <a href="page1" class="card-link">CLICK HERE</a>
+                        <a href="#" class="card-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">The Magic Of DOCKER</h5>
+                        <h6 class="card-subtitle mb-2 text-muted"></h6>
+                        <p class="card-text">Basic info about Docker and then some tips and tricks for how to use it.</p>
+                        <a href="page2" class="card-link">CLICK HERE</a>
+                        <a href="#" class="card-link"></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row mb-3">
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 {% endblock %}
