@@ -23,31 +23,30 @@ def test_request_about(client):
     assert b"My name is Austin. Welcome to my Bootstrap Site!" in response.data
 
 def test_request_page1(client):
-    """This makes the index page"""
+    """This makes the Git page 1"""
     response = client.get("/page1")
     assert response.status_code == 200
-    assert b"Page 1" in response.data
+    assert b"GIT - WHAT IS IT?" in response.data
 
 def test_request_page2(client):
-    """This makes the index page"""
+    """This makes the Docker page 2"""
     response = client.get("/page2")
     assert response.status_code == 200
     assert b"Page 2" in response.data
 
 def test_request_page3(client):
-    """This makes the index page"""
+    """This makes the Python/Flask page 3"""
     response = client.get("/page3")
     assert response.status_code == 200
     assert b"Page 3" in response.data
 
 def test_request_page4(client):
-    """This makes the index page"""
+    """This makes the CI/CD page 4"""
     response = client.get("/page4")
     assert response.status_code == 200
     assert b"Page 4" in response.data
 
 def test_request_page_not_found(client):
-    """This makes the index page"""
+    """This makes the error page"""
     response = client.get("/page5")
     assert response.status_code == 404
-
