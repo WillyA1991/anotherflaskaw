@@ -79,27 +79,47 @@
             <div class="col-8">
                 <h3>DOCKER PROCESS & TERMINAL COMMANDS</h3>
                 <p>
+                    <h4>Docker Process Example</h4>
+                </p>
+                <p>
                     Although Docker is a functional platform that can easily integrate into a text editor such as
                     Pycharm for ease of use, it also has a variety commands that can be utilized directly via a
                     terminal. Below is a step-by-step guide to accessing and running an application with Docker
                     commands, using this web application as an
                     example:
+                </p>
+                <p>
                 <ol>
                     <li>Ensure that Docker has been installed on your local machine so that the commands provided will
                         operate correctly
                     </li>
-                    <li>From the command line of choice, enter <b>< docker pull
-                        austinwilly14/projectsetupflaskbase:master ></b></li>
+                    <li>From the command line of choice navigate to the desired folder location with <b>< cd ></b>
+                        commands, and then enter <b><
+                            docker pull
+                            austinwilly14/projectsetupflaskbase:master ></b></li>
                     <li>After the process has finished, enter <b>< docker images ></b> to see a list of images that are
                         available on your host machine. If you see the new image listed, you know it worked!
+                    <li>After this has been confirmed use the command line to ensure that you are in the correct
+                        directory where the image files are stored on your local machine, utilizing <b>< cd></b> & <b><
+                            pwd ></b> commands
                     </li>
-                    <li>After this has been confirmed, use the command line to navigate to the directory where the image and all its relevant files were stored on your local machine</li>
-                    <li>Next, we will compose and run the container for this newly pulled image. Enter <b>< docker-compose up -d ></b> in the appropriate directory</li>
+                    <li>Next, we will compose and run the container for this newly pulled image. Enter <b><
+                        docker-compose up -d ></b> in the appropriate directory with the docker-compose.yml file. "-d"
+                        will ensure the processes take place in the background of your terminal
+                    </li>
                     <li>A few moments will pass while the process completes and runs the new container</li>
-                    <li>Enter <b>< docker ps ></b> to see the list of active containers, which should now include the one that was just composed</li>
-                    <li>If all looks as it should, open your browser and enter into the URL bar <b>< localhost:80 ></b></li>
-                    <li>Voila! This web-based application should now be hosted and visible on your local machine in all its glory!</li>
+                    <li>Enter <b>< docker ps ></b> to see the list of active containers, which should now include the
+                        one that was just composed
+                    </li>
+                    <li>If all looks as it should, open your web browser and enter into the URL bar: <b>localhost:80</b>
+                    </li>
+                    <li>Voila! This web-based application should now be hosted and visible on your local machine in all
+                        its glory!
+                    </li>
                 </ol>
+                </p>
+                <p>
+                    <h4>Docker Terminal Commands</h4>
                 </p>
                 <p>
                     Below is a non-comprehensive list of Docker commands that can be used in a
