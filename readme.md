@@ -9,9 +9,9 @@
 
 * [Developmental Deployment](https://aw-is601-1-dev.herokuapp.com/)
 
-## --Caught up with 2/22/22 class--
+## --WORK BELOW MAINTAINED FROM KWILLIAMS REPO FOR POSTERITY - UNCHANGED
 
-
+---------------------
 
 ## Setting up CI/CD
 
