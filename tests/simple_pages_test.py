@@ -44,7 +44,7 @@ def test_request_page4(client):
     """This makes the CI/CD page 4"""
     response = client.get("/page4")
     assert response.status_code == 200
-    assert b"Page 4" in response.data
+    assert b"CONTINUOUS INTEGRATION & DELIVERY" in response.data
 
 def test_request_page_not_found(client):
     """This makes the error page"""

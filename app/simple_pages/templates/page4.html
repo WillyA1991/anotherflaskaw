@@ -1,4 +1,132 @@
 {% extends "base.html" %}
 {% block content %}
-    Page 4
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>CONTINUOUS INTEGRATION & DELIVERY</h1>
+                <p>
+                    According to martinfowler.com, <a
+                        href="https://www.martinfowler.com/articles/continuousIntegration.html">Continuous
+                    Integration</a>(CI) is, "a software development practice where members of a team integrate their
+                    work
+                    frequently...Each integration is verified by an automated build (including test) to detect
+                    integration errors as quickly as possible." Martin claims that many DevOps teams find that this
+                    technique leads to less issues in development and faster project-completion times, because CI can
+                    and should happen, at least, daily.
+                </p>
+                <p>
+                    He also describes <a href="https://www.martinfowler.com/bliki/ContinuousDelivery.html">Continuous
+                    Delivery</a>(CD) as, "a software development discipline where you build software in such a way that
+                    the
+                    software can be released to production at any time." This is made possible by CI of software,
+                    building executable programs, and running automated tests on the executables. Considering all this,
+                    Martin goes on to say that a key component of CD is the <a
+                        href="https://www.martinfowler.com/bliki/DeploymentPipeline.html">Deployment Pipeline</a>.
+                    Deployment Pipelines break an automatic build into stages so that feedback can be provided more
+                    quickly.
+                </p>
+                <p>
+                    This web application utilizes the CI/CD technique via <a
+                        href="https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions">GitHub
+                    Actions</a>, which I go into more detail about below.
+                </p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-8">
+                <h3>GITHUB ACTIONS</h3>
+                <p>
+                    GitHub Actions is a platform that allows for CI/CD on projects. It allows for <i>workflows</i> to be
+                    created that build and test every pull request made to the <a
+                        href="https://github.com/WillyA1991/anotherflaskaw">GitHub Repository</a>, and also deploy
+                    merged
+                    pull requests to production environments. There are more functions of GitHub Actions, but for this
+                    site and assignment we will not focus on those specifically.
+                </p>
+                <p>
+                    This web application has GitHub Actions activated in the following way:
+                <ol>
+                    <li class="mb-2">After the <a href="https://github.com/WillyA1991/anotherflaskaw">repository</a> for
+                        this assignment was created in GitHub, I went to Settings>Code and automation>Actions>General
+                    </li>
+                    <li class="mb-2">Under the "Actions permissions" header I clicked "Allow all actions" to activate
+                        this service
+                    </li>
+                    <li class="mb-2">Then, under the "Workflow permissions" header I clicked "Read and write
+                        permissions"
+                    </li>
+                    <li class="mb-2">Once this was finalized in the GitHub Repository, I ensured that 2 separate YAML
+                        files (.yml) were appropriately created in the project files under a .github folder: one for a
+                        Development Workflow and another for a Production Workflow
+                    </li>
+                    <li>Lastly, "Secrets" need to be setup in the GitHub repository that allow for the CI/CD process to
+                        stage the application in <a
+                                href="https://www.heroku.com/about">Heroku's</a> environments and on <a
+                                href="https://hub.docker.com/">DockerHub</a>
+                    </li>
+                    <ul>
+                        <li>Secrets in GitHub can be found under Settings>Security>Secrets>Actions</li>
+                        <li>For these workflows in this application, we had to create Action Secrets for
+                            "DOCKER_USERNAME", "DOCKER_PASSWORD", and "HEROKU_API_KEY"
+                        </li>
+                        <li>The necessary login credentials and credentials were then also placed into the "dev.yml" and
+                            "prod.yml" files
+                        </li>
+                    </ul>
+                </ol>
+                </p>
+                <p>
+                    Now that the setup for workflows has been discussed, let's discuss the workflow files themselves
+                    starting with the <b>Development Workflow</b>. A snapshot of the file code is provided to the right
+                    for reference.
+                </p>
+                <ul>
+                    <li class="mb-2">The <b>event</b> that will trigger this Development Workflow in the GitHub
+                        repository is when a
+                        pull request is made on a branch titled "Master" or "Main" within the GitHub repository
+                    </li>
+                    <li class="mb-2">When this condition is met, a sequential set of <b>jobs</b> takes place</li>
+                    <li>First, the workflow will prepare and run a <b>pytest</b> framework by ensuring that the latest
+                        version of Ubuntu is being used and that the python files for the test are prepared
+                        appropriately
+                    </li>
+                    <ul class="mb-2">
+                        <li>The test will then run the application content against the parameters defined in the
+                            "simple_pages_test.py" file and hunt for anything that does not match
+                        </li>
+                        <li>If the test fails, a warning symbol (<span class="red">red X</span>) will appear next to the
+                            "run_pytest" line in the GitHub repository under "Actions>All workflows>Development
+                            Workflow"
+                            and state specifically which section of the test failed
+                        </li>
+                        <li>If it passes, then a green checkmark will be shown and the Workflow will continue onto the
+                            next
+                            step: Deploying to the Development Environment in <a
+                                    href="https://www.heroku.com/about">Heroku</a></li>
+                    </ul>
+                    <li>Now, utilizing the latest version of Ubuntu, the Workflow will take the application
+                        and,
+                        after confirming login credentials and the correct API Key for Heroku, will stage the
+                        application for review in a Development Environment
+                    </li>
+                    <ul class="mb-2">
+                        <li>Heroku has been prepared for this application to have a separate Development and Production
+                            environment
+                        </li>
+                    </ul>
+                    <li class="mb-2">Once this passes, assuming there are no issues to be addressed, the application can
+                        be reviewed in its Development Environment to assure that all is working appropriately, by going
+                        to the "readme.md" file and clicking on the Development Workflow link therein
+                    </li>
+                    <li class="mb-2">AND THAT'S THAT! If all is working as intended, the team member can rebase their
+                        local master from the GitHub repository master and keep working, knowing that there are no
+                        issues with integration or delivery
+                    </li>
+                </ul>
+            </div>
+            <div class="col-4 mt-5">
+                <img src="static\images\DevWorkflow.png" class="img-fluid" alt="DevWorkflow YAML File">
+            </div>
+        </div>
+    </div>
 {% endblock %}
