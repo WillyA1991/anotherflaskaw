@@ -56,7 +56,7 @@
                         permissions"
                     </li>
                     <li class="mb-2">Once this was finalized in the GitHub Repository, I ensured that 2 separate YAML
-                        files (.yml) were appropriately created in the project files under a .github folder: one for a
+                        files (.yml) were appropriately created in the project files under a ".github" folder: one for a
                         Development Workflow and another for a Production Workflow
                     </li>
                     <li>Lastly, "Secrets" need to be setup in the GitHub repository that allow for the CI/CD process to
@@ -75,9 +75,14 @@
                     </ul>
                 </ol>
                 </p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-8">
                 <p>
                     Now that the setup for workflows has been discussed, let's discuss the workflow files themselves
-                    starting with the <b>Development Workflow</b>. A snapshot of the file code is provided to the right
+                    starting with the <b>Development Workflow</b>. A snapshot of the YAML file code is provided to the
+                    right
                     for reference.
                 </p>
                 <ul>
@@ -110,22 +115,77 @@
                         application for review in a Development Environment
                     </li>
                     <ul class="mb-2">
-                        <li>Heroku has been prepared for this application to have a separate Development and Production
-                            environment
+                        <li>Heroku has been prepared for this application to have separate Development and Production
+                            environments
+                        </li>
+                        <li>Just like the pytest step, once this is completed successfully there will be a green
+                            checkmark
                         </li>
                     </ul>
-                    <li class="mb-2">Once this passes, assuming there are no issues to be addressed, the application can
+                    <li class="mb-2">Once this passes the application can
                         be reviewed in its Development Environment to assure that all is working appropriately, by going
-                        to the "readme.md" file and clicking on the Development Workflow link therein
+                        to the "readme.md" file and clicking on the Heroku Development Workflow-link therein
                     </li>
-                    <li class="mb-2">AND THAT'S THAT! If all is working as intended, the team member can rebase their
-                        local master from the GitHub repository master and keep working, knowing that there are no
-                        issues with integration or delivery
+                    <li class="mb-2">If all looks well, the pull request can be finalized and merged into the Main or
+                        Master Branch!
                     </li>
                 </ul>
             </div>
-            <div class="col-4 mt-5">
+            <div class="col-4 mt-2">
                 <img src="static\images\DevWorkflow.png" class="img-fluid" alt="DevWorkflow YAML File">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-8">
+                <p>
+                    With the Development Workflow process complete, the option to merge this branch with the Master or
+                    Main branch is now available. Proceeding with the Merge will combine the commits that were made and
+                    tested into the remote Master branch. This is the <b>event</b> that will trigger our <b>Production
+                    Workflow</b>. Let's dive into this more below. A snapshot of this code is to the right for
+                    reference.
+                </p>
+                <ul>
+                    <li class="mb-2">As the merge is completed, the GitHub Action for this <i>push</i> is triggered,
+                        for Main or Master branches, and begins the workflow
+                    </li>
+                    <li class="mb-2">Just like the Development Workflow above, a pytest is run to ensure there are no
+                        errors or issues
+                    </li>
+                    <li>Once completed the next job continues, which is connecting to the specified DockerHub repository
+                        and building the latest version of the image container
+                    </li>
+                    <ul class="mb-2">
+                        <li>Similar to what was described above for the setup steps, this is activated by applying the
+                            correct information to the GitHub Actions Secrets section...
+                        </li>
+                        <li>...and then ensuring that this information has also been correctly transcribed into the
+                            "prod.yml" file
+                        </li>
+                    </ul>
+                    <li class="mb-2">Just like the pytest, if this is successful a green checkmark will appear</li>
+                    <li class="mb-2">The last step in this workflow is to now deploy the application to Heroku, but this
+                        time to its Production Environment
+                    </li>
+                    <li>The Production Environment is separate from the Development Environment, but functions in a
+                        similar way for this workflow
+                    </li>
+                    <ul class="mb-2">
+                        <li>GitHub Actions will check to make sure the login credentials and API Key are accurate and
+                            then show a green checkmark once the Production Environment has been successfully updated
+                        </li>
+                    </ul>
+                    <li class="mb-2">Once the green checkmark appears, the application can be reviewed in its Production
+                        Environment to ensure finally that there are no issue
+                    </li>
+                    </ul>
+                <p class="mt-5">
+                    <span class="red bold">And there it is!</span> If you made it this far, thank you very much for reading. I hope you enjoyed
+                    the content of this application and my explanation of concepts.
+                </p>
+            </div>
+            <div class="col-4 mt-1">
+                <img src="static\images\ProdWorkflow1.png" class="img-fluid" alt="ProdWorkflow1 YAML File">
+                <img src="static\images\ProdWorkflow2.png" class="img-fluid" alt="ProdWorkflow2 YAML File">
             </div>
         </div>
     </div>
