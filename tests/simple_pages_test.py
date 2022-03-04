@@ -38,7 +38,7 @@ def test_request_page3(client):
     """This makes the Python/Flask page 3"""
     response = client.get("/page3")
     assert response.status_code == 200
-    assert b"Page 3" in response.data
+    assert b"PYTHON / FLASK" in response.data
 
 def test_request_page4(client):
     """This makes the CI/CD page 4"""
