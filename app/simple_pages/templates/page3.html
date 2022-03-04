@@ -1,4 +1,105 @@
 {% extends "base.html" %}
 {% block content %}
-    Page 3
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>PYTHON / FLASK</h1>
+                <p>
+                    This page of my application will focus on breaking down an outline of my project files as well as
+                    written descriptions of pytest and flask.
+                </p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-7">
+                <h3>PYTHON & PYTEST</h3>
+                <p>
+                    According to the organization's website: "<a
+                        href="https://www.python.org/doc/essays/blurb/">Python</a> is an interpreted, object-oriented,
+                    high-level programming language with dynamic semantics." In simpler terms, it is a programming
+                    language used for <b>object-oriented programming</b> of applications.
+                </p>
+                <p>
+                    As written on the pytest organization website: "<a
+                        href="https://docs.pytest.org/en/7.0.x/">Pytest</a> is a framework that makes it easy to write
+                    small, readable tests that can scale to support complex functional testing for applications and
+                    libraries." In this application we utilize pytest functions to ensure content on the interior pages
+                    is accurately being displayed. A visual example of this provided to the right.
+                </p>
+                <p>
+                    This test is designed to check against the navigation links and header bar to make sure that the
+                    correct pages inside the application are being linked to, and that the right copy is written for
+                    each page on the header nav bar. If anything does not match, Pytest will return an error.
+                </p>
+            </div>
+            <div class="col-5 mt-5">
+                <img src="static\images\Pytest1.png" class="img-fluid" alt="Pytest Example 1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <p>
+                    An additional pytest example is provided to the right, here. This test is designed to check the
+                    content
+                    of the <a href="about">About</a> page and ensures that the H1-headline is written and showing appropriately.
+                </p>
+                <p>
+                    Pytest is extremely useful and important. By testing our projects as they are being developed, in a
+                    dependable way, we can ensure the work that we are doing is functional and not detrimental to the
+                    overall project code.
+                </p>
+                <p>
+                    For this application I utilized a <b>Simple Pages</b> test file to orchestrate the tests for each
+                    page and element (more on Simple Page below). The example images from this test file are shown above, on the right-hand side of
+                    the page. The functions written in this file scan the pages of the application that are specified
+                    and then cross-check the content therein to look for 100% matches. If there is not a 100% match,
+                    running a pytest will return errors that then need to be addressed.
+                </p>
+            </div>
+            <div class="col-5">
+                <img src="static\images\Pytest2.png" class="img-fluid" alt="Pytest Example 2">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-7">
+                <h3>FLASK</h3>
+                <p>
+                    According to the Flask website: "<a href="https://flask.palletsprojects.com/en/2.0.x/">Flask</a> is
+                    a lightweight web application framework designed to make getting started quick and easy." It is a
+                    Python module, which means that the entire framework is written in Python code. The repository for
+                    this application is hosted on <a href="https://github.com/WillyA1991/anotherflaskaw">GitHub here</a>.
+                    Additionally, here are the Heroku links for the <a
+                        href="https://dashboard.heroku.com/apps/aw-is601-1-prod">Production</a> and <a
+                        href="https://dashboard.heroku.com/apps/aw-is601-1-dev">Development</a> Environments for this
+                    application.
+                </p>
+                <p>
+                    <b>Flask Blueprints</b> encapsulate functionality for the web app, such as views and templates. It
+                    is a
+                    very helpful way to organize and work with an application. For this application, I utilize Flask
+                    Blueprints for the bundle of controllers that handle routes within the app itself. As you can see in
+                    the image to the right, this application uses Flask to import a Blueprint template that is then used
+                    to make the bundle of controllers that allow for correct routing between pages.
+                </p>
+                <p>
+                    <b>Simple Pages</b> is also a bundle of controllers made from a Flask Blueprint! With Simple Pages,
+                    I have the ability to make template folders that then "speak to one another" efficiently. For this
+                    app, we utilize this method to have all the html pages of the site return and route correctly by
+                    having a parent "base.html" file living within the root of the app. Any of the internal pages will
+                    return correctly in this manner without having to add additional code.
+                </p>
+            </div>
+            <div class="col-5 mt-5">
+                <img src="static\images\Blueprint.png" class="img-fluid" alt="Blueprint">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-7">
+                <h3>PROJECT FILE BREAKDOWN</h3>
+                <ul>
+                    <li>ghhhhhhhhhhhh</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 {% endblock %}
