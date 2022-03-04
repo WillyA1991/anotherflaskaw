@@ -12,17 +12,20 @@
                     efficiency". An in-progress, or completed, project's code can be stored in a
                     <a href="https://github.com/">GitHub</a> repository for proper management and version control of the
                     source
-                    code. Git is regarded as the dominant source code management software (SCM) at this time. It was
+                    code. Git is regarded as the dominant source code management (SCM) software at this time. It was
                     initially designed and developed by <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus
                     Torvalds</a> for Linux kernel development in 2005.
                 </p>
                 <p>
                     Version control systems, like Git, allow individuals or groups to work on a project while
-                    providing all of the tools necessary to ensure that no mishaps take place in the code that could
+                    providing them with all the tools necessary to ensure that no mishaps take place in the code that
+                    could
                     interfere with someone else's work or break the entire project.
                 </p>
                 <p>
-                    In the sections below I will go into detail about Git regarding:
+                    My GitHub repository for this application can be found <a
+                        href="https://github.com/WillyA1991/anotherflaskaw">here</a>, or by clicking the image to the
+                    right. In the sections below on this page I will go into detail about Git regarding:
                 <ul>
                     <li>Repositories</li>
                     <li>Branches</li>
@@ -33,8 +36,8 @@
                 </p>
             </div>
             <div class="col-4 mt-5">
-                <img src="static\images\GitBranches.png" class="img-fluid" alt="Git Branches visual">
-                <i>(Image taken from https://dev.to/milu_franz/git-explained-the-basics-igc)</i>
+                <a href="https://github.com/WillyA1991/anotherflaskaw"><img src="static\images\GitStock.png"
+                                                                            class="img-fluid" alt="Git Stock Photo"></a>
             </div>
         </div>
         <div class="row mt-3">
@@ -54,15 +57,18 @@
                     A repository is a project that is stored and worked off of by a
                     team. The functions of the repository allow for proper version control and testing of code before it
                     is considered finalized. Source code can be pulled down from a repository by a user and then updated
-                    on their own time. Repositories also allow source code to be safely updated by managing the uploads
+                    on their own machine. Repositories also allow source code to be safely updated by managing the uploads
                     of new branches/work from team members in real time.
                 </p>
                 <p>
-                    Repositories offer many different tools and functions through GitHub for testing and managing your
+                    Repositories offer many different tools and functions, through GitHub, for testing and managing your
                     source code. Integrating your code into a development or production environment, testing to ensure
                     compatability with Master branch and other web apps, and scanning for any errors that may have been
-                    missed are all available via GitHub Repositories.
+                    missed are all available functions of GitHub Repositories.
                 </p>
+            </div>
+            <div class="col-4 mt-5">
+                <img src="static\images\StockRepo.png" class="img-fluid" alt="Stock Repository Image">
             </div>
         </div>
         <div class="row mt-3">
@@ -101,8 +107,8 @@
                 <p>
                     The Master branch that now lives on their machine, as
                     well as the new branch that they
-                    created to work from, are both Local branches. They are not connected to the repository that
-                    the whole team has access to. Local branches are saved only to the team member's machine.
+                    created to work from, are both Local branches. They are not automatically updated to the repository that
+                    the whole team has access to. Local branches are saved only to the team member's machine, until pushed elsewhere.
                 </p>
                 <p>
                     The team member can make as many local branches as they need to when making updates to the project.
@@ -110,7 +116,7 @@
                     ensure
                     compatability as well as functionality with the Master branch. After this is completed with
                     positive results, the
-                    local branch is then ready to be pushed to the remote branch, which lives in the remote repository.
+                    local branch is then ready to be pushed to the remote branch, which lives in the remote repository online.
                 </p>
                 <h5>Remote Branches</h5>
                 <p>
@@ -118,15 +124,19 @@
                     online GitHub repository. The updates that were made to the local branch will be visible as a
                     new remote branch for the team to see and work with in the online repository. It will stay separated
                     from the
-                    Master branch until it is reviewed and approved to merge.
+                    Master branch until it is reviewed and approved to merge via a pull request.
                 </p>
                 <p>
                     Remote branches are extremely beneficial to the version control process because the Master branch
-                    remains safe even after a team member pushes their changes to the online repository. Code review and
-                    any further testing that is necessary can take place one final time in this stage. Once everything
+                    remains safe, and unchanged, even after a team member pushes their branch-changes to the online repository. Code review and
+                    any testing that is necessary can take place one final time in this stage. Once everything
                     in the new Remote branch has been confirmed as correct, functional, and not in conflict with the
-                    Master branch, a merge can take place.
+                    Master branch, a merge can take place via a pull request.
                 </p>
+            </div>
+            <div class="col-4 mt-5">
+                <img src="static\images\GitBranches.png" class="img-fluid" alt="Git Branches Visual">
+                <i>(Image taken from <a href="https://dev.to/milu_franz/git-explained-the-basics-igc">https://dev.to/milu_franz/git-explained-the-basics-igc)</a></i>
             </div>
         </div>
         <div class="row mt-3">
@@ -137,7 +147,7 @@
                     commits, although there does seem to be some confusion about this online.
                     Tags function as specific reference points in a project history, often used to denote version of
                     releases for a project. Another way to say this is that
-                    tags are symbolic names given to a revision that always point to the same object, and they do not
+                    tags are symbolic names given to a revision, and they do not
                     change with commits.
                 </p>
                 <p>
@@ -148,8 +158,11 @@
                     to
                     create semantic version number identifier tags that correspond to software release cycles." Git
                     supports 2 different types of tags: Lightweight and Annotated. Lightweight tags store less metadata
-                    than Annotated tags and are generally less preferred than their counterparts.
+                    than Annotated tags and are generally less preferred than their counterparts, according to ATLASSIAN.
                 </p>
+            </div>
+            <div class="col-4">
+                <img src="static\images\Tag.png" class="img-fluid" alt="Stock Price Tag">
             </div>
         </div>
         <div class="row mt-3">
@@ -180,9 +193,11 @@
                 <p>
                     Merging in Git is when you join two or more development histories together into one branch
                     of the project. Commits in the separate histories, or branches, will be incorporated
-                    into the Master branch most often when a merge request is completed, from my experience. Merging can
+                    into one of the branches being merged - creating a "most up to date" version of the branch
+                    that receives the merge. The Master or Main branch is most often the branch that is updated with all
+                    the changes when a merge request is completed, from my experience so far. Merging can
                     take place within the GitHub repository for the project itself via simple interface options that
-                    will be presented upon a new remote branch upload.
+                    will be presented upon a new remote branch upload. This is referred to as a <b>pull request</b>.
                 </p>
                 <p>
                     Merges are a vital step in the development workflow for coding projects. They allow a team to safely
@@ -195,6 +210,9 @@
                     working
                     off of the latest files.
                 </p>
+            </div>
+            <div class="col-4">
+                <img src="static\images\Merge.png" class="img-fluid" alt="Stock Merge Sign">
             </div>
         </div>
     </div>
