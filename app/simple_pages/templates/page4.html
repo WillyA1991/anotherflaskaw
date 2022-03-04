@@ -2,7 +2,7 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-8">
                 <h1>CONTINUOUS INTEGRATION & DELIVERY</h1>
                 <p>
                     According to martinfowler.com, <a
@@ -31,12 +31,15 @@
                     Actions</a>, which I go into more detail about below.
                 </p>
             </div>
+            <div class="col-4 mt-4">
+                <img src="static\images\CICDIndex.png" class="img-fluid" alt="CICD image">
+            </div>
         </div>
         <div class="row mt-3">
             <div class="col-8">
                 <h3>GITHUB ACTIONS</h3>
                 <p>
-                    GitHub Actions is a platform that allows for CI/CD on projects. It allows for <i>workflows</i> to be
+                    GitHub Actions is a platform that allows for CI/CD on projects. It allows for workflows to be
                     created that build and test every pull request made to the <a
                         href="https://github.com/WillyA1991/anotherflaskaw">GitHub Repository</a>, and also deploy
                     merged
@@ -76,9 +79,14 @@
                 </ol>
                 </p>
             </div>
+            <div class="col-4 mt-4">
+                <a href="https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions"><img
+                        src="static\images\GitActions.png" class="img-fluid" alt="GitHub Actions Logo"></a>
+            </div>
         </div>
         <div class="row mt-3">
             <div class="col-8">
+                <h4>Workflow Processes</h4>
                 <p>
                     Now that the setup for workflows has been discussed, let's discuss the workflow files themselves
                     starting with the <b>Development Workflow</b>. A snapshot of the YAML file code is provided to the
@@ -104,7 +112,8 @@
                             Workflow"
                             and state specifically which section of the test failed
                         </li>
-                        <li>If it passes, then a green checkmark will be shown and the Workflow will continue onto the
+                        <li>If it passes, then a <span class="green">green checkmark</span> will be shown and the
+                            Workflow will continue onto the
                             next
                             step: Deploying to the Development Environment in <a
                                     href="https://www.heroku.com/about">Heroku</a></li>
@@ -118,8 +127,8 @@
                         <li>Heroku has been prepared for this application to have separate Development and Production
                             environments
                         </li>
-                        <li>Just like the pytest step, once this is completed successfully there will be a green
-                            checkmark
+                        <li>Just like the pytest step, once this is completed successfully there will be a <span
+                                class="green">green checkmark</span>
                         </li>
                     </ul>
                     <li class="mb-2">Once this passes the application can
@@ -140,47 +149,63 @@
                 <p>
                     With the Development Workflow process complete, the option to merge this branch with the Master or
                     Main branch is now available. Proceeding with the Merge will combine the commits that were made and
-                    tested into the remote Master branch. This is the <b>event</b> that will trigger our <b>Production
-                    Workflow</b>. Let's dive into this more below. A snapshot of this code is to the right for
+                    tested into the repository Master branch. This is the <b>event</b> that will trigger our <b>Production
+                    Workflow</b>. Let's dive into this more below. A snapshot of this YAML file code is to the right for
                     reference.
                 </p>
                 <ul>
-                    <li class="mb-2">As the merge is completed, the GitHub Action for this <i>push</i> is triggered,
+                    <li class="mb-2">As the merge is completed, the GitHub Action for this push is triggered,
                         for Main or Master branches, and begins the workflow
                     </li>
                     <li class="mb-2">Just like the Development Workflow above, a pytest is run to ensure there are no
                         errors or issues
                     </li>
-                    <li>Once completed the next job continues, which is connecting to the specified DockerHub repository
+                    <li>Once completed the next job continues, which is connecting to the specified <a
+                            href="https://hub.docker.com/repository/docker/austinwilly14/projectsetupflaskbase">DockerHub
+                        repository</a>
                         and building the latest version of the image container
-                    </li>
-                    <ul class="mb-2">
-                        <li>Similar to what was described above for the setup steps, this is activated by applying the
-                            correct information to the GitHub Actions Secrets section...
                         </li>
-                        <li>...and then ensuring that this information has also been correctly transcribed into the
-                            "prod.yml" file
+                        <ul class="mb-2">
+                            <li>Similar to what was described above for the setup steps, this is activated by applying
+                                the
+                                correct information to the GitHub Actions Secrets section...
+                            </li>
+                            <li>...and then ensuring that this information has also been correctly transcribed into the
+                                "prod.yml" file
+                            </li>
+                        </ul>
+                        <li class="mb-2">Just like the pytest, if this is successful a <span class="green">green checkmark</span>
+                            will appear
                         </li>
-                    </ul>
-                    <li class="mb-2">Just like the pytest, if this is successful a green checkmark will appear</li>
-                    <li class="mb-2">The last step in this workflow is to now deploy the application to Heroku, but this
-                        time to its Production Environment
-                    </li>
-                    <li>The Production Environment is separate from the Development Environment, but functions in a
-                        similar way for this workflow
-                    </li>
-                    <ul class="mb-2">
-                        <li>GitHub Actions will check to make sure the login credentials and API Key are accurate and
-                            then show a green checkmark once the Production Environment has been successfully updated
+                        <li class="mb-2">The last step in this workflow is to deploy the application to Heroku, but this
+                            time to its Production Environment
                         </li>
-                    </ul>
-                    <li class="mb-2">Once the green checkmark appears, the application can be reviewed in its Production
-                        Environment to ensure finally that there are no issue
-                    </li>
-                    </ul>
+                        <li>The Production Environment is separate from the Development Environment, but functions in a
+                            similar way for this workflow
+                        </li>
+                        <ul class="mb-2">
+                            <li>GitHub Actions will check to make sure the login credentials and API Key are accurate
+                                and
+                                then show a <span class="green">green checkmark</span> once the Production Environment
+                                has been successfully updated
+                            </li>
+                        </ul>
+                        <li class="mb-2">Once the <span class="green">green checkmark</span> appears, the application
+                            can be reviewed in its Production
+                            Environment to ensure that there are no issues
+                        </li>
+                </ul>
                 <p class="mt-5">
-                    <span class="red bold">And there it is!</span> If you made it this far, thank you very much for reading. I hope you enjoyed
-                    the content of this application and my explanation of concepts.
+                    <h4>Closing Statement</h4>
+                    <span class="red bold">And there it is!</span> From here the team member who followed this Git Push
+                    process through all of the workflows and actions can rebase their Local Master or Local Main branch
+                    to match the repository Master or Main branch. Then work can continue in the CI/CD process!
+                </p>
+                <p>
+                    If you made it
+                    this far, thank you very much for
+                    reading. I hope you enjoyed
+                    the content of this application and my explanation of the concepts we have learned in IS601 so far.
                 </p>
             </div>
             <div class="col-4 mt-1">
