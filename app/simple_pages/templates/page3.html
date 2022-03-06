@@ -41,7 +41,8 @@
                 <p>
                     An additional pytest example is provided to the right, here. This test is designed to check the
                     content
-                    of the <a href="about">About</a> page and ensures that the H1-headline is written and showing appropriately.
+                    of the <a href="about">About</a> page and ensures that the H1-headline is written and showing
+                    appropriately.
                 </p>
                 <p>
                     Pytest is extremely useful and important. By testing our projects as they are being developed, in a
@@ -50,7 +51,8 @@
                 </p>
                 <p>
                     For this application I utilized a <b>Simple Pages</b> test file to orchestrate the tests for each
-                    page and element (more on Simple Page below). The example images from this test file are shown above, on the right-hand side of
+                    page and element (more on Simple Page below). The example images from this test file are shown
+                    above, on the right-hand side of
                     the page. The functions written in this file scan the pages of the application that are specified
                     and then cross-check the content therein to look for 100% matches. If there is not a 100% match,
                     running a pytest will return errors that then need to be addressed.
@@ -97,8 +99,94 @@
             <div class="col-7">
                 <h3>PROJECT FILE BREAKDOWN</h3>
                 <ul>
-                    <li>ghhhhhhhhhhhh</li>
+                    <li class="mb-2"><b>IS601 Project setup</b> = root of the project; contains all files for the
+                        application
+                    </li>
+                    <ul>
+                        <li class="mb-2"><b>.github</b> = folder that contains the workflow files for GitHub Actions
+                        </li>
+                        <ul>
+                            <li class="mb-2"><b>dev.yml</b> = YAML file that dictates the event(s) and parameters of the
+                                Development Workflow in GitHub Actions
+                            </li>
+                            <li class="mb-2"><b>prod.yml</b> = YAML file that dictates the event(s) and parameters of
+                                the Production Workflow in GitHub Actions
+                            </li>
+                        </ul>
+                        <li class="mb-2"><b>.pytest_cache</b> = historical records of tests run on this application
+                            during pytest
+                        </li>
+                        <li class="mb-2"><b>app</b> = application folder that houses each of the application .html pages
+                            and their content/imagery, as well as appropriate controllers
+                        </li>
+                        <ul>
+                            <li class="mb-2"><b>simple_pages</b> = package of templates that are the individual .html
+                                pages for this application, and their Flask Blueprint controller bundle
+                            </li>
+                            <li class="mb-2"><b>static</b> = folder that houses the css and javascript code files for
+                                the application, as well as any images that are stored for use on the internal pages
+                            </li>
+                            <li class="mb-2"><b>templates</b> = houses the base.html file that runs the simple-pages
+                                template of header navigation so that it can persist across all pages of the
+                                application
+                            </li>
+                            <li class="mb-2"><b>__init__.py</b> = file that creates and configures an instance of the
+                                Flask application
+                            </li>
+                            <li class="mb-2"><b>run.py</b> = python file that allows Gunicorn to serve the application
+                                in production
+                            </li>
+                        </ul>
+                        <li class="mb-2"><b>calculator</b> = houses calculator controller file; not in-use for this
+                            application at the moment
+                        </li>
+                        <li class="mb-2"><b>tests</b> = folder that houses all the tests, and their designed parameters
+                            for triggering/running, in the application
+                        </li>
+                        <li class="mb-2"><b>.coveragerc</b> = controller for coverage.py file</li>
+                        <li class="mb-2"><b>.dockerignore</b> = file that tells the docker CLI to exclude files and
+                            directories that match ".git/", in this application, when building the application image
+                        </li>
+                        <li class="mb-2"><b>.gitignore</b> = file that tells Git a list of intentionally untracked files
+                            to ignore during its processes
+                        </li>
+                        <li class="mb-2"><b>.pylintrc</b> = file that instructs the pylint check process to ignore
+                            certain checks
+                        </li>
+                        <li class="mb-2"><b>docker-compose.yml</b> = Orchestration file that contains the configuration
+                            to develop locally, it overrides the Dockerfile to run the flask development server instead
+                            of running the gunicorn server that is used for hosting on Heroku
+                        </li>
+                        <li class="mb-2"><b>Dockerfile</b> = file that is used to create an image to run in a container
+                            that runs the program
+                        </li>
+                        <li class="mb-2"><b>heroku.yml</b> = YAML file that dictates the Docker build for Heroku when
+                            hosting the application in Development or Production environments - defines how to build the
+                            Docker images on Heroku
+                        </li>
+                        <li class="mb-2"><b>pytest.ini</b> = configuration file used to hold pytest configuration
+                            information - where the test parameters can be pulled from and what parameters to ignore
+                        </li>
+                        <li class="mb-2"><b>readme.md</b> = Read Me file for the application - text/image/link
+                            information that a user can place within the application for context and instructions
+                        </li>
+                        <li class="mb-2"><b>requirements.txt</b> = Text file that details what python packages are
+                            needed to run this application
+                        </li>
+                        <li class="mb-2"><b>setup.py</b> = Python file that is the build script for "setuptools". Helps
+                            to install needed python packages for the application
+                        </li>
+                    </ul>
                 </ul>
+            </div>
+            <div class="col-5">
+                <h4>On the left is a breakdown of each folder and file that comprises this application</h4>
+                <p>
+                    Not all of them
+                    are in use at this time, but they all have a function and purpose.This breakdown is in outline
+                    format, mirroring the project file orchestration of the source code.
+                </p>
+                <img src="static\images\Outline.png" class="img-fluid" alt="Project File Snapshot">
             </div>
         </div>
     </div>
