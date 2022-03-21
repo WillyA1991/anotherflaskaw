@@ -1,4 +1,4 @@
-""" This is the Calculator Class"""
+""" This is the Calculator Class """
 from calculator.calculations import Addition, Subtraction, Multiplication
 
 
