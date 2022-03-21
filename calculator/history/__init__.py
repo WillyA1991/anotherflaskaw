@@ -1,5 +1,5 @@
 """ Calculation history class for maintaining result posterity """
-from calculator.operations import Addition, Subtraction, Multiplication
+from calculator.calculations import Addition, Subtraction, Multiplication
 
 
 class Calculations:
