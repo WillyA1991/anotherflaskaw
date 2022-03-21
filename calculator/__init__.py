@@ -1,5 +1,5 @@
 """ This is the Calculator Class """
-from calculator.calculations import Addition, Subtraction, Multiplication
+from calculator.calculations import Addition, Subtraction, Multiplication, Division
 
 
 class Calculator:
@@ -22,4 +22,10 @@ class Calculator:
     def multiply(tuple_list):
         # multiply method within the Calculator class
         calculation = Multiplication.create(tuple_list)
+        return calculation.get_result()
+
+    @staticmethod
+    def divide(tuple_list):
+        # divide method within the Calculator class
+        calculation = Division.create(tuple_list)
         return calculation.get_result()
