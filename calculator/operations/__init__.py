@@ -27,3 +27,14 @@ class Multiplication:
         # Multiplication method
         return value_1 * value_2
 
+
+class Division:
+    # Operations division class
+
+    @staticmethod
+    def divide(value_1, value_2):
+        # Division method
+        try:
+            return value_1 / value_2
+        except ZeroDivisionError:
+            return "Cannot divide by 0"
