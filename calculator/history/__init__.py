@@ -1,5 +1,5 @@
 """ Calculation history class for maintaining result posterity """
-from calculator.calculations import Addition, Subtraction, Multiplication
+from calculator.calculations import Addition, Subtraction, Multiplication, Division
 
 
 class Calculations:
@@ -61,4 +61,10 @@ class Calculations:
     def add_multiplication_calculation(values):
         # Create a multiplication and add object to history using factory method create
         Calculations.add_calculation(Multiplication.create(values))
+        return True
+
+    @staticmethod
+    def add_division_calculation(values):
+        # Create a division and add object to history using factory method create
+        Calculations.add_calculation(Division.create(values))
         return True
