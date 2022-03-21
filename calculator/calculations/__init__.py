@@ -21,8 +21,8 @@ class Calculation:
         # lists can be modified and tuple cannot, tuple are faster.
         # We need to convert the tuple of potentially random data types (its raw data)
         # into a standard data format to keep things consistent so we convert it to float
-        # then i make it a tuple again because i actually won't need to change the calculation values
-        # I can also use it as a list and then i would be able to edit the calculation
+        # then make it a tuple again because you actually won't need to change the calculation values
+        # can also use it as a list and then would be able to edit the calculation
         list_values_float = []
         for item in tuple_list:
             list_values_float.append(float(item))
@@ -47,7 +47,7 @@ class Multiplication(Calculation):
         # returns the results of the multiplication
         mult_of_values = 1.0
         for value in self.values:
-            mult_of_values = Mult.multiply(result, value)
+            mult_of_values = Mult.multiply(value, mult_of_values)
         return mult_of_values
 
 
