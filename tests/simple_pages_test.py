@@ -9,6 +9,7 @@ def test_request_main_menu_links(client):
     assert b'<a class="nav-link" href="/page2">Docker</a>' in response.data
     assert b'<a class="nav-link" href="/page3">Python/Flask</a>' in response.data
     assert b'<a class="nav-link" href="/page4">CI/CD</a>' in response.data
+    assert b'<a class="nav-link" href="/page5">OOP & Testing</a>' in response.data
 
 def test_request_index(client):
     """This makes the index page"""
@@ -46,7 +47,13 @@ def test_request_page4(client):
     assert response.status_code == 200
     assert b"CONTINUOUS INTEGRATION & DELIVERY" in response.data
 
+def test_request_page5(client):
+    """This makes the OOP & Testing page 5"""
+    response = client.get("/page5")
+    assert response.status_code == 200
+    assert b"OBJECT ORIENTED PROGRAMMING (OOP) GLOSSARY" in response.data
+
 def test_request_page_not_found(client):
     """This makes the error page"""
-    response = client.get("/page5")
+    response = client.get("/page6")
     assert response.status_code == 404
