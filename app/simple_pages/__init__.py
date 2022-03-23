@@ -10,6 +10,7 @@ simple_pages = Blueprint('simple_page', __name__,
 @simple_pages.route('/<page>')
 def show(page):
     """function for properly swapping pages in Simple Pages"""
+    # pylint: disable=consider-using-f-string
     try:
         return render_template('%s.html' % page)
     except TemplateNotFound:
