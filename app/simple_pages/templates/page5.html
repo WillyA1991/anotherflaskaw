@@ -26,14 +26,15 @@
                         <li>Instantiation is the process of taking a class definition and creating an object that then
                             can be used in a program
                         </li>
-                        <li class="mb-2">An example: <img src="static\images\InstantiationExample.png" class="img-fluid"
+                        <li>An <u>Instance</u> is an object that is built from a class and that contains real data
+                        <li class="mb-3">An example: <img src="static\images\InstantiationExample.png" class="img-fluid"
                                                           alt="Containerized Applications visual"></li>
                     </ul>
                     <li class="mb-2"><b>CLASS</b> = <a href="https://www.geeksforgeeks.org/python-oops-concepts/">GeeksforGeeks.com</a>
                         defines a class as a collection of objects - they contain the blueprints from which objects are
                         then created. They are logical entities that can be called upon in the program, and contain methods and attributes
                     <ul>
-                        <li class="mb-2">An example: <img src="static\images\ClassExample.png" class="img-fluid"
+                        <li class="mb-3">An example: <img src="static\images\ClassExample.png" class="img-fluid"
                                                           alt="Containerized Applications visual"></li>
                     </ul>
                     </li>
@@ -44,15 +45,77 @@
                         <li class="mb-2">they are entities that have state, identity, and behavior associated with
                             them
                         </li>
-                        <li class="mb-2">An example is here: The test is instantiating the class "Division" from the
+                        <li class="mb-3">An example is here: The test is instantiating the class "Division" from the
                             calculations file. The object "calculation" is then created, from which the test can then
                             run its assertion against <img src="static\images\ObjectExample.png" class="img-fluid"
                                                            alt="Containerized Applications visual"></li>
                     </ul>
-                    <li class="mb-2"><b>NAMESPACE</b> = </li>
-                    <li class="mb-2"><b>CONSTRUCTOR</b> = </li>
-                    <li class="mb-2"><b>FIXTURE</b> = </li>
-                    <li class="mb-2"><b>TYPE HINT</b> = </li>
+                    <li class="mb-2"><b>NAMESPACE</b> = Namespaces are the files and folders of classes. <a
+                            href="https://realpython.com/python-namespaces-scope/">realpython.com</a> elaborates on this
+                        by saying, "A namespace is a collection of currently defined symbolic names along with
+                        information about the object that each name references. You can think of a namespace as a
+                        dictionary in which the keys are the object names and the values are the objects themselves.
+                        Each key-value pair maps a name to its corresponding object."
+                    </li>
+                    <ul>
+                        <li class="mb-2">In python there are 4 types of namespaces:
+                            <ul>
+                                <li><u>Built-In</u> - contains the names of all Python's objects that are available
+                                    whenever it is running [ex: max(), len(), int(), str()]
+                                </li>
+                                <li><u>Global</u> - contains any names defined at the level of the main program. These
+                                    are created when the program starts and they remain in existence until interpreter
+                                    is terminated
+                                </li>
+                                <li><u>Enclosing</u> - functions can can also define other functions inside themselves.
+                                    Enclosing namespaces define a function to a local namespace within themselves. When
+                                    the enclosing namespace is called, the local namespaces will be activated in
+                                    whatever way they are programmed
+                                </li>
+                                <li><u>Local</u> - functions can can also define other functions inside themselves. The
+                                    namespaces that live inside of an enclosed namespace are called the local namespace.
+                                    They are called when their enclosing namespace is called
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mb-2">As a program runs namespaces are created as necessary and then deleted when no
+                            longer needed
+                        </li>
+                        <li class="mb-2">Different namespaces can have different instances of the same name active, i.e.
+                            "def f()" appearing in 2 different namespaces, but this can never be so within a single
+                            namespace
+                        </li>
+                        <li class="mb-3">As long as each instance is in a different namespace, they're all maintained
+                            separately and won't interfere
+                        </li>
+                    </ul>
+                    <li class="mb-2"><b>CONSTRUCTOR</b> = Constructors are used for instantiating an object.
+                        <a href="https://www.geeksforgeeks.org/constructors-in-python/">GeeksforGeeks</a> says, "The
+                        task of constructors is to initialize(assign values) to the data members of the class when an
+                        object of the class is created. In Python the __init__() method is called the constructor and is
+                        always called when an object is created."
+                    </li>
+                    <ul>
+                        <li class="mb-3">An example: when the class "Calculation" is instantiated the constructor method
+                            shown "(def __init__(self, tuple_list: tuple):" will always get called as the object is
+                            being created <img
+                                    src="static\images\ConstructorExample.png" class="img-fluid"
+                                    alt="Containerized Applications visual"></li>
+                    </ul>
+                    <li class="mb-2"><b>FIXTURE</b> = Fixtures are functions which will run before each Pytest test to
+                        which it is applied. <a href="https://www.tutorialspoint.com/pytest/pytest_fixtures.htm">tutorialspoint.com</a>
+                        says, "Fixtures are used to feed some data to the tests such as database connections, URLs to
+                        test and some sort of input data. Therefore, instead of running the same code for every test, we
+                        can attach fixture function to the tests and it will run and return the data to the test before
+                        executing each test."
+                    </li>
+                    <ul>
+                        <li class="mb-2">A function is marked as a fixture like this: "@pytest.fixture"</li>
+                        <li class="mb-3">An example: <img
+                                src="static\images\FixtureExample.png" class="img-fluid"
+                                alt="Containerized Applications visual"></li>
+                    </ul>
+                    <li class="mb-2"><b>TYPE HINT</b> =</li>
                     <li class="mb-2"><b>TYPE CAST</b> = </li>
                     <li class="mb-2"><b>UNIT TEST</b> = </li>
                     <li class="mb-2"><b>STATIC</b> = </li>
