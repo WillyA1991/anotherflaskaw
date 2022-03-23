@@ -158,7 +158,7 @@
                     </ul>
                 </ul>
             </div>
-            <div class="col-6 mt-1">
+            <div class="col-6 mt-5">
                 <img
                         src="static\images\FixtureExample.png" class="img-fluid"
                         alt="fixture code ex">
@@ -206,7 +206,7 @@
                             elaborates on this with "Type Casting is the method to convert the variable data type into a
                             certain data type in order to the operation required to be performed by users."
                         </li>
-                        <li class="mb-3">An example here: in the for-loop, each item is being type-cast as
+                        <li class="mb-4">An example here: in the for-loop, each item is being type-cast as
                             "(float(item))"
                         </li>
                     </ul>
@@ -232,7 +232,7 @@
                         <li class="mb-2">This is basically making sure that each of the smallest and smaller bits of the
                             program work, so that we can ensure that the larger program will work, too
                         </li>
-                        <li class="mb-3">Having unit tests can also be a great way for someone to easily pick up your
+                        <li class="mb-4">Having unit tests can also be a great way for someone to easily pick up your
                             project if you leave a team or need additional support, as they will review and test each
                             small component of a program
                         </li>
@@ -272,7 +272,7 @@
                             instance state nor the class state. They work like regular functions, but belong to the
                             class' namespace
                         </li>
-                        <li class="mb-3">An example is to the right</li>
+                        <li class="mb-5">An example is to the right</li>
                     </ul>
                 </ul>
             </div>
@@ -285,22 +285,74 @@
         <div class="row">
             <div class="col-6">
                 <ul>
-                    <li class="mb-2"><b>INSTANCE METHOD</b> =</li>
+                    <li class="mb-2"><b>INSTANCE METHOD</b> = these methods have one default parameter that is
+                        essential: <i>self</i>. When an object is passed through the Instance Method, it is assigned
+                        "Instance Attributes", which <a href="https://www.geeksforgeeks.org/instance-method-in-python/">GeeksforGeeks</a>
+                        says are not shared amongst objects - each object will have its own instance attributes
+                    </li>
+                    <ul>
+                        <li class="mb-2">Instance methods enact upon themselves the object parameter that is passed through when the
+                            class is called
+                        </li>
+                        <li>In the example to the right, we see in the "Calculation" class, the instance method "def
+                            __init__(self, tuple_list: tuple):"
+                        </li>
+                        <ul>
+                            <li class="mb-4">When "Calculation(X)" is called, the <i>self</i> attribute will auto-assign whatever "X"
+                                is to that instance attribute
+                            </li>
+                        </ul>
+                    </ul>
                 </ul>
+            </div>
+            <div class="col-6 mt-5">
+                <img
+                        src="static\images\InstantiationExample.png" class="img-fluid"
+                        alt="Instance method code ex">
             </div>
         </div>
         <div class="row">
             <div class="col-6">
                 <ul>
-                    <li class="mb-2"><b>INSTANCE PROPERTY</b> =</li>
+                    <li class="mb-2"><b>INSTANCE PROPERTY</b> = Instance properties are the variables that are created
+                        in a class when an Instance Method is called
+                    </li>
+                    <ul>
+                        <li class="mb-2">Appearing as variables, they are instead properties because they are created
+                            within and a part of a class when it is called
+                        </li>
+                        <li class="mb-4">In the example to the right, the property is the result and return for
+                            "self.values"
+                        </li>
+                    </ul>
                 </ul>
+            </div>
+            <div class="col-6">
+                <img
+                        src="static\images\InstantiationExample.png" class="img-fluid"
+                        alt="Instance Property code ex">
             </div>
         </div>
         <div class="row">
             <div class="col-6">
                 <ul>
-                    <li class="mb-2"><b>STATIC PROPERTY</b> =</li>
+                    <li class="mb-2"><b>STATIC PROPERTY</b> = Static properties are the variables that are created
+                        in a class when a Static Method is called
+                    </li>
+                    <ul>
+                        <li class="mb-2">Appearing as variables, they are instead properties because they are created
+                            within and a part of a class when it is called
+                        </li>
+                        <li class="mb-4">In the example to the right, the property is the result and return for
+                            "calculation"
+                        </li>
+                    </ul>
                 </ul>
+            </div>
+            <div class="col-6 mt-3">
+                <img
+                        src="static\images\StaticPropertyExample.png" class="img-fluid"
+                        alt="Static Property code ex">
             </div>
         </div>
         <div class="row">
