@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="row mt-3">
-            <div class="col-8">
+            <div class="col-6">
                 <h2>OBJECT ORIENTED PROGRAMMING (OOP) TERMS</h2>
                 <ul>
                     <li class="mb-2"><b>INSTANTIATION</b> = <a
@@ -27,29 +27,56 @@
                             can be used in a program
                         </li>
                         <li>An <u>Instance</u> is an object that is built from a class and that contains real data
-                        <li class="mb-3">An example: <img src="static\images\InstantiationExample.png" class="img-fluid"
-                                                          alt="Containerized Applications visual"></li>
                     </ul>
+                </ul>
+            </div>
+            <div class="col-6 mt-5">
+                <img src="static\images\InstantiationExample.png" class="img-fluid"
+                     alt="Instantiation Code Ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
                     <li class="mb-2"><b>CLASS</b> = <a href="https://www.geeksforgeeks.org/python-oops-concepts/">GeeksforGeeks.com</a>
                         defines a class as a collection of objects - they contain the blueprints from which objects are
-                        then created. They are logical entities that can be called upon in the program, and contain methods and attributes
-                    <ul>
-                        <li class="mb-3">An example: <img src="static\images\ClassExample.png" class="img-fluid"
-                                                          alt="Containerized Applications visual"></li>
-                    </ul>
+                        then created. They are logical entities that can be called upon in the program, and contain
+                        methods and attributes
                     </li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <img src="static\images\ClassExample.png" class="img-fluid"
+                     alt="Class Code Ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
                     <li class="mb-2"><b>OBJECT</b> = <a href="https://www.geeksforgeeks.org/python-oops-concepts/">GeeksforGeeks.com</a>
                         defines object as any single integer, or any single string. Lists, arrays, and dictionaries are
-                        all also objects even though they contain other objects</li>
+                        all also objects even though they contain other objects
+                    </li>
                     <ul>
                         <li class="mb-2">they are entities that have state, identity, and behavior associated with
                             them
                         </li>
-                        <li class="mb-3">An example is here: The test is instantiating the class "Division" from the
+                        <li class="mb-3">An example is to the right: The test is instantiating the class "Division" from
+                            the
                             calculations file. The object "calculation" is then created, from which the test can then
-                            run its assertion against <img src="static\images\ObjectExample.png" class="img-fluid"
-                                                           alt="Containerized Applications visual"></li>
+                            run its assertion against
+                        </li>
                     </ul>
+                </ul>
+            </div>
+            <div class="col-6 mt-5">
+                <img src="static\images\ObjectExample.png" class="img-fluid"
+                     alt="Object Code Ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <ul>
                     <li class="mb-2"><b>NAMESPACE</b> = Namespaces are the files and folders of classes. <a
                             href="https://realpython.com/python-namespaces-scope/">realpython.com</a> elaborates on this
                         by saying, "A namespace is a collection of currently defined symbolic names along with
@@ -89,6 +116,12 @@
                             separately and won't interfere
                         </li>
                     </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
                     <li class="mb-2"><b>CONSTRUCTOR</b> = Constructors are used for instantiating an object.
                         <a href="https://www.geeksforgeeks.org/constructors-in-python/">GeeksforGeeks</a> says, "The
                         task of constructors is to initialize(assign values) to the data members of the class when an
@@ -96,12 +129,22 @@
                         always called when an object is created."
                     </li>
                     <ul>
-                        <li class="mb-3">An example: when the class "Calculation" is instantiated the constructor method
+                        <li class="mb-3">An example is to the right: when the class "Calculation" is instantiated the
+                            constructor method
                             shown "(def __init__(self, tuple_list: tuple):" will always get called as the object is
-                            being created <img
-                                    src="static\images\ConstructorExample.png" class="img-fluid"
-                                    alt="Containerized Applications visual"></li>
+                            being created
+                        </li>
                     </ul>
+                </ul>
+            </div>
+            <div class="col-6">
+                <img src="static\images\ConstructorExample.png" class="img-fluid"
+                     alt="Constructor Code Ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
                     <li class="mb-2"><b>FIXTURE</b> = Fixtures are functions which will run before each Pytest test to
                         which it is applied. <a href="https://www.tutorialspoint.com/pytest/pytest_fixtures.htm">tutorialspoint.com</a>
                         says, "Fixtures are used to feed some data to the tests such as database connections, URLs to
@@ -111,10 +154,19 @@
                     </li>
                     <ul>
                         <li class="mb-2">A function is marked as a fixture like this: "@pytest.fixture"</li>
-                        <li class="mb-3">An example: <img
-                                src="static\images\FixtureExample.png" class="img-fluid"
-                                alt="Containerized Applications visual"></li>
+                        <li class="mb-5">An example is to the right</li>
                     </ul>
+                </ul>
+            </div>
+            <div class="col-6 mt-1">
+                <img
+                        src="static\images\FixtureExample.png" class="img-fluid"
+                        alt="fixture code ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
                     <li class="mb-2"><b>TYPE HINT</b> = <a
                             href="https://www.pythontutorial.net/python-basics/python-type-hints/">pythontutorial.net</a>
                         states that Type Hinting is a function of the static and dynamic typing that is available in
@@ -124,12 +176,24 @@
                         <li class="mb-2">The interpreter completely ignores type hints, so if a non-hinted at type is
                             passed through the function will still continue to run
                         </li>
-                        <li class="mb-3">An example here: "tuple_list:" is type-hinting that it should be a tuple<img
-                                src="static\images\TypeHintExample.png" class="img-fluid"
-                                alt="Containerized Applications visual"></li>
+                        <li class="mb-4">An example is to the right: "tuple_list:" is type-hinting that it should be a
+                            tuple
+                        </li>
                     </ul>
+                </ul>
+            </div>
+            <div class="col-6 mt-3">
+                <img
+                        src="static\images\TypeHintExample.png" class="img-fluid"
+                        alt="Type Hint Ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
                     <li class="mb-2"><b>TYPE CAST</b> = Type Casting is when a variable is directly influenced on what
-                        type it will be as it is being run in the program. This can be done with Constructor functions such as:
+                        type it will be as it is being run in the program. This can be done with Constructor functions
+                        such as:
                     </li>
                     <ul>
                         <li class="mb-2"><u>int()</u> - constructs an integer number, given that the input can represent
@@ -143,26 +207,142 @@
                             certain data type in order to the operation required to be performed by users."
                         </li>
                         <li class="mb-3">An example here: in the for-loop, each item is being type-cast as
-                            "(float(item))"<img
-                                    src="static\images\TypeCastExample.png" class="img-fluid"
-                                    alt="Containerized Applications visual"></li>
+                            "(float(item))"
+                        </li>
                     </ul>
-                    <li class="mb-2"><b>UNIT TEST</b> =</li>
-                    <li class="mb-2"><b>STATIC</b> = </li>
-                    <li class="mb-2"><b>STATIC METHOD</b> = </li>
-                    <li class="mb-2"><b>INSTANCE METHOD</b> = </li>
-                    <li class="mb-2"><b>INSTANCE PROPERTY</b> = </li>
-                    <li class="mb-2"><b>STATIC PROPERTY</b> = </li>
-                    <li class="mb-2"><b>ENCAPSULATION</b> = </li>
-                    <li class="mb-2"><b>INHERITANCE</b> = </li>
-                    <li class="mb-2"><b>POLYMORPHISM</b> = </li>
-                    <li class="mb-2"><b>ABSTRACTION</b> = </li>
-                    <li class="mb-2"><b>S.O.L.I.D.</b> = </li>
-                    <li class="mb-2"><b>DESIGN PATTERNS</b> = </li>
                 </ul>
             </div>
-            <div class="col-4">
-                <h2>PLACEHOLDER FOR IMAGERY</h2>
+            <div class="col-6">
+                <img
+                        src="static\images\TypeCastExample.png" class="img-fluid"
+                        alt="Type Cast Ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <ul>
+                    <li class="mb-2"><b>UNIT TEST</b> = <a href="https://performancelabus.com/unit-testing-importance/">Performancelab</a>
+                        defines Unit Testing as "testing that involves testing individual components of the software
+                        program
+                        or application. The main purpose behind this is to check that all the individual parts are
+                        working as intended. A unit is known as the smallest possible component of software that can be
+                        tested. Generally, it has a few inputs and a single output."
+                    </li>
+                    <ul>
+                        <li class="mb-2">This is basically making sure that each of the smallest and smaller bits of the
+                            program work, so that we can ensure that the larger program will work, too
+                        </li>
+                        <li class="mb-3">Having unit tests can also be a great way for someone to easily pick up your
+                            project if you leave a team or need additional support, as they will review and test each
+                            small component of a program
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>STATIC</b> = Statics are classes that cannot be instantiated, so no objects are
+                        going to be created from them. The class members are simply accessed by calling the class name
+                    </li>
+                    <ul>
+                        <li class="mb-2">Instantiation is not needed, as the class can simply be called on its own</li>
+                        <li class="mb-3">An example is here: this class, "Division", in the operations file</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-6">
+                <img
+                        src="static\images\StaticExample.png" class="img-fluid"
+                        alt="Static class code ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>STATIC METHOD</b> = are methods that take neither a <i>self</i> or a <i>class
+                        (cls)</i> parameter - therefore they are unable to modify an object or class state. They are
+                        universally available and do not require instantiation to work
+                    </li>
+                    <ul>
+                        <li class="mb-2">According to <a
+                                href="https://realpython.com/instance-class-and-static-methods-demystified/">realpython.com</a>
+                            static methods can be called on an object instance but can neither access the object
+                            instance state nor the class state. They work like regular functions, but belong to the
+                            class' namespace
+                        </li>
+                        <li class="mb-3">An example is to the right</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-6 mt-2">
+                <img
+                        src="static\images\StaticExample.png" class="img-fluid"
+                        alt="Static method code ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>INSTANCE METHOD</b> =</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>INSTANCE PROPERTY</b> =</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>STATIC PROPERTY</b> =</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>ENCAPSULATION</b> =</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>INHERITANCE</b> =</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>POLYMORPHISM</b> =</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>ABSTRACTION</b> =</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>S.O.L.I.D.</b> =</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>DESIGN PATTERNS</b> =</li>
+                </ul>
             </div>
         </div>
         <div class="row mt-3">
