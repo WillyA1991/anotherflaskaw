@@ -51,7 +51,7 @@ def test_request_page5(client):
     """This makes the OOP & Testing page 5"""
     response = client.get("/page5")
     assert response.status_code == 200
-    assert b"OBJECT ORIENTED PROGRAMMING (OOP) GLOSSARY" in response.data
+    assert b"PROJECT 2 CONTENT AND EXAMPLES" in response.data
 
 def test_request_page_not_found(client):
     """This makes the error page"""
