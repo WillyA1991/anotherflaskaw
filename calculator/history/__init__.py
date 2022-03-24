@@ -1,5 +1,5 @@
 """Calculation history class for maintaining result posterity"""
-from calculator.calculations import Addition, Subtraction, Multiplication, Division
+from calculator.operations import Addition, Subtraction, Multiplication, Division
 
 
 class Calculations:
@@ -46,26 +46,26 @@ class Calculations:
         return Calculations.history.append(calculation)
 
     @staticmethod
-    def add_addition_calculation(values):
+    def add_addition_calculation(value1, value2):
         """Create an addition and add object to history using factory method create"""
-        Calculations.add_calculation(Addition.create(values))
+        Calculations.add_calculation(Addition.add(value1, value2))
         # Get the result of the calculation
         return True
 
     @staticmethod
-    def add_subtraction_calculation(values):
+    def add_subtraction_calculation(value1, value2):
         """Create a subtraction and add object to history using factory method create"""
-        Calculations.add_calculation(Subtraction.create(values))
+        Calculations.add_calculation(Subtraction.subtract(value1, value2))
         return True
 
     @staticmethod
-    def add_multiplication_calculation(values):
+    def add_multiplication_calculation(value1, value2):
         """Create a multiplication and add object to history using factory method create"""
-        Calculations.add_calculation(Multiplication.create(values))
+        Calculations.add_calculation(Multiplication.multiply(value1, value2))
         return True
 
     @staticmethod
-    def add_division_calculation(values):
+    def add_division_calculation(value1, value2):
         """Create a division and add object to history using factory method create"""
-        Calculations.add_calculation(Division.create(values))
+        Calculations.add_calculation(Division.divide(value1, value2))
         return True

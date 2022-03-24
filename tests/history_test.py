@@ -71,3 +71,61 @@ def test_get_calc_last_result_object(clear_history_fixture, setup_addition_calcu
     # pylint: disable=unused-argument,redefined-outer-name
     # This test is if it returns the last calculation as an object
     assert isinstance(History.get_last_calculation_object(), Addition)
+
+
+def test_add_addition_calculation(clear_history_fixture, setup_addition_calculation_fixture):
+    """Test adding an addition calculation to the history"""
+    # pylint: disable=unused-argument,redefined-outer-name,unused-variable
+    # Test to see if history is updated with the addition calculation
+    value1 = 1
+    value2 = 2.0
+    calculation = History.add_addition_calculation(value1, value2)
+    assert History.count_history() == 2
+    assert History.get_last_calculation_object() == 3
+
+
+def test_add_subtraction_calculation(clear_history_fixture, setup_addition_calculation_fixture):
+    """Test adding an addition calculation to the history"""
+    # pylint: disable=unused-argument,redefined-outer-name,unused-variable
+    # Test to see if history is updated with the addition calculation
+    History.clear_history()
+    value1 = 1
+    value2 = 2.0
+    calculation = History.add_subtraction_calculation(value1, value2)
+    assert History.count_history() == 1
+    assert History.get_last_calculation_object() == -1
+
+
+def test_add_multiplication_calculation(clear_history_fixture, setup_addition_calculation_fixture):
+    """Test adding an addition calculation to the history"""
+    # pylint: disable=unused-argument,redefined-outer-name,unused-variable
+    # Test to see if history is updated with the addition calculation
+    History.clear_history()
+    value1 = 1
+    value2 = 2.0
+    calculation = History.add_multiplication_calculation(value1, value2)
+    assert History.count_history() == 1
+    assert History.get_last_calculation_object() == 2
+
+
+def test_add_division_calculation(clear_history_fixture, setup_addition_calculation_fixture):
+    """Test adding an addition calculation to the history"""
+    # pylint: disable=unused-argument,redefined-outer-name,unused-variable
+    # Test to see if history is updated with the addition calculation
+    History.clear_history()
+    value1 = 1
+    value2 = 2.0
+    calculation = History.add_division_calculation(value1, value2)
+    assert History.count_history() == 1
+    assert History.get_last_calculation_object() == 0.5
+
+
+def test_add_division_calculation_2(clear_history_fixture, setup_addition_calculation_fixture):
+    """Test adding an addition calculation to the history"""
+    # pylint: disable=unused-argument,redefined-outer-name,unused-variable,assert-on-string-literal
+    # Test to see if history is updated with the addition calculation
+    History.clear_history()
+    value1 = 1.0
+    value2 = 0
+    calculation = History.add_division_calculation(value1, value2)
+    assert "Cannot divide by 0"
