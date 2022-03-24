@@ -1,39 +1,35 @@
 """ These are the Operation classes """
-
+# pylint: disable=too-few-public-methods
 
 class Addition:
-    # Operations addition class
-
+    """Operations addition class"""
     @staticmethod
     def add(value_1, value_2):
-        # Add method
+        """Add method"""
         return value_1 + value_2
 
 
 class Subtraction:
-    # Operations subtraction class
-
+    """Operations subtraction class"""
     @staticmethod
     def subtract(value_1, value_2):
-        # Subtraction method
+        """Subtraction method"""
         return value_1 - value_2
 
 
 class Multiplication:
-    # Operations multiplication class
-
+    """Operations multiplication class"""
     @staticmethod
     def multiply(value_1, value_2):
-        # Multiplication method
+        """Multiplication method"""
         return value_1 * value_2
 
 
 class Division:
-    # Operations division class
-
+    """Operations division class"""
     @staticmethod
     def divide(value_1, value_2):
-        # Division method
+        """Division method"""
         try:
             return value_1 / value_2
         except ZeroDivisionError:

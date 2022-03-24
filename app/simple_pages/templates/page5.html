@@ -2,11 +2,501 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col-8">
-                <h1>OBJECT ORIENTED PROGRAMMING (OOP) GLOSSARY</h1>
+            <div class="col">
+                <h1>PROJECT 2 CONTENT AND EXAMPLES</h1>
                 <p>
-                   Lorem Ipsum dolorum.......
+                    This page has been amended to the original web application in order to detail the required
+                    information and examples for Project 2. Below you will see 4 sections that detail information we
+                    have learned so far concerning, but not limited to, glossary of terms, AAA Testing and Python
+                    testing importance, Principles of OOP, and SOLID.
                 </p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-6">
+                <h2>OBJECT ORIENTED PROGRAMMING (OOP) TERMS</h2>
+                <ul>
+                    <li class="mb-2"><b>INSTANTIATION</b> = <a
+                            href="https://www.techopedia.com/definition/26857/instantiate">techopedia</a> defines
+                        Instantiation as, " instantiation (the noun) in computer science refers to the creation of an
+                        object (or an “instance” of a given class)...an instantiated object is named and created, in
+                        memory or on disk."
+                    </li>
+                    <ul>
+                        <li>Instantiation is the process of taking a class definition and creating an object that then
+                            can be used in a program
+                        </li>
+                        <li>An <u>Instance</u> is an object that is built from a class and that contains real data
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-6 mt-5">
+                <img src="static\images\InstantiationExample.png" class="img-fluid"
+                     alt="Instantiation Code Ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>CLASS</b> = <a href="https://www.geeksforgeeks.org/python-oops-concepts/">GeeksforGeeks.com</a>
+                        defines a class as a collection of objects - they contain the blueprints from which objects are
+                        then created. They are logical entities that can be called upon in the program, and contain
+                        methods and attributes
+                    </li>
+                    <ul>
+                        <li>A visual example from my code is to the right</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-6">
+                <img src="static\images\ClassExample.png" class="img-fluid"
+                     alt="Class Code Ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>OBJECT</b> = <a href="https://www.geeksforgeeks.org/python-oops-concepts/">GeeksforGeeks.com</a>
+                        defines object as any single integer, or any single string. Lists, arrays, and dictionaries are
+                        all also objects even though they contain other objects
+                    </li>
+                    <ul>
+                        <li class="mb-2">they are entities that have state, identity, and behavior associated with
+                            them
+                        </li>
+                        <li class="mb-3">An example is to the right: The test is instantiating the class "Division" from
+                            the
+                            calculations file. The object "calculation" is then created, from which the test can then
+                            run its assertion against
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-6 mt-5">
+                <img src="static\images\ObjectExample.png" class="img-fluid"
+                     alt="Object Code Ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <ul>
+                    <li class="mb-2"><b>NAMESPACE</b> = Namespaces are the files and folders of classes. <a
+                            href="https://realpython.com/python-namespaces-scope/">realpython.com</a> elaborates on this
+                        by saying, "A namespace is a collection of currently defined symbolic names along with
+                        information about the object that each name references. You can think of a namespace as a
+                        dictionary in which the keys are the object names and the values are the objects themselves.
+                        Each key-value pair maps a name to its corresponding object."
+                    </li>
+                    <ul>
+                        <li class="mb-2">In python there are 4 types of namespaces:
+                            <ul>
+                                <li><u>Built-In</u> - contains the names of all Python's objects that are available
+                                    whenever it is running [ex: max(), len(), int(), str()]
+                                </li>
+                                <li><u>Global</u> - contains any names defined at the level of the main program. These
+                                    are created when the program starts and they remain in existence until interpreter
+                                    is terminated
+                                </li>
+                                <li><u>Enclosing</u> - functions can can also define other functions inside themselves.
+                                    Enclosing namespaces define a function to a local namespace within themselves. When
+                                    the enclosing namespace is called, the local namespaces will be activated in
+                                    whatever way they are programmed
+                                </li>
+                                <li><u>Local</u> - functions can can also define other functions inside themselves. The
+                                    namespaces that live inside of an enclosed namespace are called the local namespace.
+                                    They are called when their enclosing namespace is called
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mb-2">As a program runs namespaces are created as necessary and then deleted when no
+                            longer needed
+                        </li>
+                        <li class="mb-2">Different namespaces can have different instances of the same name active, i.e.
+                            "def f()" appearing in 2 different namespaces, but this can never be so within a single
+                            namespace
+                        </li>
+                        <li class="mb-3">As long as each instance is in a different namespace, they're all maintained
+                            separately and won't interfere
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>CONSTRUCTOR</b> = Constructors are used for instantiating an object.
+                        <a href="https://www.geeksforgeeks.org/constructors-in-python/">GeeksforGeeks</a> says, "The
+                        task of constructors is to initialize(assign values) to the data members of the class when an
+                        object of the class is created. In Python the __init__() method is called the constructor and is
+                        always called when an object is created."
+                    </li>
+                    <ul>
+                        <li class="mb-3">An example is to the right: when the class "Calculation" is instantiated the
+                            constructor method
+                            shown "(def __init__(self, tuple_list: tuple):" will always get called as the object is
+                            being created
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-6">
+                <img src="static\images\ConstructorExample.png" class="img-fluid"
+                     alt="Constructor Code Ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>FIXTURE</b> = Fixtures are functions which will run before each Pytest test to
+                        which it is applied. <a href="https://www.tutorialspoint.com/pytest/pytest_fixtures.htm">tutorialspoint.com</a>
+                        says, "Fixtures are used to feed some data to the tests such as database connections, URLs to
+                        test and some sort of input data. Therefore, instead of running the same code for every test, we
+                        can attach fixture function to the tests and it will run and return the data to the test before
+                        executing each test."
+                    </li>
+                    <ul>
+                        <li class="mb-2">A function is marked as a fixture like this: "@pytest.fixture"</li>
+                        <li class="mb-5">An example is to the right</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-6 mt-5">
+                <img
+                        src="static\images\FixtureExample.png" class="img-fluid"
+                        alt="fixture code ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>TYPE HINT</b> = <a
+                            href="https://www.pythontutorial.net/python-basics/python-type-hints/">pythontutorial.net</a>
+                        states that Type Hinting is a function of the static and dynamic typing that is available in
+                        Python. It means that we can hint at the specified input or output of a function
+                    </li>
+                    <ul>
+                        <li class="mb-2">The interpreter completely ignores type hints, so if a non-hinted at type is
+                            passed through the function will still continue to run
+                        </li>
+                        <li class="mb-4">An example is to the right: "tuple_list:" is type-hinting that it should be a
+                            tuple
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-6 mt-3">
+                <img
+                        src="static\images\TypeHintExample.png" class="img-fluid"
+                        alt="Type Hint Ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>TYPE CAST</b> = Type Casting is when a variable is directly influenced on what
+                        type it will be as it is being run in the program. This can be done with Constructor functions
+                        such as:
+                    </li>
+                    <ul>
+                        <li class="mb-2"><u>int()</u> - constructs an integer number, given that the input can represent
+                            a
+                            whole number, <u>str()</u> - constructs a string, and <u>float()</u> - constructs a
+                            float number, given that the input can be a float number
+                        </li>
+                        <li class="mb-2"><a
+                                href="https://www.geeksforgeeks.org/type-casting-in-python-implicit-and-explicit-with-examples/">GeeksforGeeks</a>
+                            elaborates on this with "Type Casting is the method to convert the variable data type into a
+                            certain data type in order to the operation required to be performed by users."
+                        </li>
+                        <li class="mb-4">An example here: in the for-loop, each item is being type-cast as
+                            "(float(item))"
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-6">
+                <img
+                        src="static\images\TypeCastExample.png" class="img-fluid"
+                        alt="Type Cast Ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <ul>
+                    <li class="mb-2"><b>UNIT TEST</b> = <a href="https://performancelabus.com/unit-testing-importance/">Performancelab</a>
+                        defines Unit Testing as "testing that involves testing individual components of the software
+                        program
+                        or application. The main purpose behind this is to check that all the individual parts are
+                        working as intended. A unit is known as the smallest possible component of software that can be
+                        tested. Generally, it has a few inputs and a single output."
+                    </li>
+                    <ul>
+                        <li class="mb-2">This is basically making sure that each of the smallest and smaller bits of the
+                            program work, so that we can ensure that the larger program will work, too
+                        </li>
+                        <li class="mb-5">Having unit tests can also be a great way for someone to easily pick up your
+                            project if you leave a team or need additional support, as they will review and test each
+                            small component of a program
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>STATIC</b> = Statics are classes that cannot be instantiated, so no objects are
+                        going to be created from them. The class members are simply accessed by calling the class name
+                    </li>
+                    <ul>
+                        <li class="mb-2">Instantiation is not needed, as the class can simply be called on its own</li>
+                        <li class="mb-3">An example is here: this class, "Division", in the operations file</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-6 mb-3">
+                <img
+                        src="static\images\StaticExample.png" class="img-fluid"
+                        alt="Static class code ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>STATIC METHOD</b> = are methods that take neither a <i>self</i> or a <i>class
+                        (cls)</i> parameter - therefore they are unable to modify an object or class state. They are
+                        universally available and do not require instantiation to work
+                    </li>
+                    <ul>
+                        <li class="mb-2">According to <a
+                                href="https://realpython.com/instance-class-and-static-methods-demystified/">realpython.com</a>
+                            static methods can be called on an object instance but can neither access the object
+                            instance state nor the class state. They work like regular functions, but belong to the
+                            class' namespace
+                        </li>
+                        <li class="mb-5">An example is to the right</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-6 mt-2 mb-3">
+                <img
+                        src="static\images\StaticExample.png" class="img-fluid"
+                        alt="Static method code ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>INSTANCE METHOD</b> = these methods have one default parameter that is
+                        essential: <i>self</i>. When an object is passed through the Instance Method, it is assigned
+                        "Instance Attributes", which <a href="https://www.geeksforgeeks.org/instance-method-in-python/">GeeksforGeeks</a>
+                        says are not shared amongst objects - each object will have its own instance attributes
+                    </li>
+                    <ul>
+                        <li class="mb-2">Instance methods enact upon themselves the object parameter that is passed
+                            through when the
+                            class is called
+                        </li>
+                        <li>In the example to the right, we see in the "Calculation" class, the instance method "def
+                            __init__(self, tuple_list: tuple):"
+                        </li>
+                        <ul>
+                            <li class="mb-4">When "Calculation(X)" is called, the <i>self</i> attribute will auto-assign
+                                whatever "X"
+                                is to that instance attribute
+                            </li>
+                        </ul>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-6 mt-5">
+                <img
+                        src="static\images\InstantiationExample.png" class="img-fluid"
+                        alt="Instance method code ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>INSTANCE PROPERTY</b> = Instance properties are the variables that are created
+                        in a class when an Instance Method is called
+                    </li>
+                    <ul>
+                        <li class="mb-2">Appearing as variables, they are instead properties because they are created
+                            within and a part of a class when it is called
+                        </li>
+                        <li class="mb-4">In the example to the right, the property is the result and return for
+                            "self.values"
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-6">
+                <img
+                        src="static\images\InstantiationExample.png" class="img-fluid"
+                        alt="Instance Property code ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>STATIC PROPERTY</b> = Static properties are the variables that are created
+                        in a class when a Static Method is called
+                    </li>
+                    <ul>
+                        <li class="mb-2">Appearing as variables, they are instead properties because they are created
+                            within and a part of a class when it is called
+                        </li>
+                        <li class="mb-4">In the example to the right, the property is the result and return for
+                            "calculation"
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-6 mt-3">
+                <img
+                        src="static\images\StaticPropertyExample.png" class="img-fluid"
+                        alt="Static Property code ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>ENCAPSULATION</b> = As written on <a
+                            href="https://www.freecodecamp.org/news/object-oriented-programming-concepts-21bb035f7260/">freecodecamp.org</a>
+                        "Encapsulation is achieved when each object keeps its state private, inside a class. Other
+                        objects don’t have direct access to this state. Instead, they can only call a list of public
+                        functions — called methods."
+                    </li>
+                    <ul>
+                        <li class="mb-2">This is the idea of wrapping data and the methods that work on that data within
+                            one unit
+                        </li>
+                        <li class="mb-2">This puts restrictions on accessing variables and methods directly, and can
+                            prevent the accidental modification of data - to prevent accidental change an object’s
+                            variable can only be changed by an object’s method, which is the guiding principle behind
+                            "private methods"
+                        </li>
+                        <li class="mb-2">A class is an example of Encapsulation, as it encapsulates all the data for its
+                            member functions, variables, etc
+                        </li>
+                        <li class="mb-4">In the example to the right Encapsulation is seen with the class "Subtraction"
+                            as all the data and methods for that class to be invoked are within the class
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-6 pt-5 mt-5">
+                <img
+                        src="static\images\EncapsulationExample.png" class="img-fluid"
+                        alt="Encapsulation code ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>INHERITANCE</b> = <a href="https://www.geeksforgeeks.org/python-oops-concepts/">GeeksforGeeks</a>
+                        states that Inheritance is "the capability of one class to derive or inherit the properties from
+                        another class. The class that derives properties is called the derived class or <u>child
+                            class</u> and
+                        the class from which the properties are being derived from is called the base class or <u>parent
+                            class</u>."
+                    </li>
+                    <ul>
+                        <li class="mb-2">Child classes are able to use, or call upon, their parent class methods as
+                            though they were their own
+                        </li>
+                        <li class="mb-2">Child classes can also modify the behavior of the parent class if they are set
+                            up to do so
+                        </li>
+                        <li clas="mb-5">In the example to the right, the child class is the "class Division" and it is
+                            inheriting from the parent class "(Calculation)"
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-6 mb-4">
+                <img
+                        src="static\images\InheritanceExample.png" class="img-fluid"
+                        alt="Inheritance code ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>POLYMORPHISM</b> = <a
+                            href="https://www.freecodecamp.org/news/object-oriented-programming-concepts-21bb035f7260/">freecodecamp.org</a>
+                        states that, "polymorphism gives a way to use a class exactly like its parent so there’s no
+                        confusion with mixing types. But each child class keeps its own methods as they are."
+                    </li>
+                    <ul>
+                        <li class="mb-2">This concept makes it possible for the program to use a child class method that
+                            is exactly like its parent, but not confuse which is the right one to call for the desired
+                            output
+                        </li>
+                        <li class="mb-2">The child class still has access to the parent method, but changes it as needed
+                            for the specific need of the method being called at that point in time
+                        </li>
+                        <li class="mb-2">In the example to the right, Polymorphism can be seen via the methods
+                            "get_result(self)" That method is available for both "Addition" and "Multiplication", but if
+                            called the return output will be correct for whatever one was called
+                        </li>
+                        <ul>
+                            <li class="mb-4">They are both inheriting from their parent class "(Calculation)"</li>
+                        </ul>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-6 mb-4">
+                <img
+                        src="static\images\PolyExample.png" class="img-fluid"
+                        alt="Polymorphism code ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>ABSTRACTION</b> =</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>S.O.L.I.D.</b> =</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li class="mb-2"><b>DESIGN PATTERNS</b> =</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-8">
+                <h2>AAA TESTING WITH PYTHON</h2>
+            </div>
+            <div class="col-4">
+                <h2>PLACEHOLDER FOR IMAGERY</h2>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-8">
+                <h2>PRINCIPLES OF OOP</h2>
+            </div>
+            <div class="col-4">
+                <h2>PLACEHOLDER FOR IMAGERY</h2>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-8">
+                <h2>S.O.L.I.D. PROGRAMMING</h2>
+            </div>
+            <div class="col-4">
+                <h2>PLACEHOLDER FOR IMAGERY</h2>
             </div>
         </div>
     </div>
