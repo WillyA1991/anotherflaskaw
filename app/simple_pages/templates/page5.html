@@ -23,10 +23,12 @@
                         memory or on disk."
                     </li>
                     <ul>
-                        <li>Instantiation is the process of taking a class definition and creating an object that then
+                        <li class="mb-2">Instantiation is the process of taking a class definition and creating an
+                            object that then
                             can be used in a program
                         </li>
-                        <li>An <u>Instance</u> is an object that is built from a class and that contains real data
+                        <li class="mb-4">An <u>Instance</u> is an object that is built from a class and that contains
+                            real data
                     </ul>
                 </ul>
             </div>
@@ -64,7 +66,7 @@
                         <li class="mb-2">they are entities that have state, identity, and behavior associated with
                             them
                         </li>
-                        <li class="mb-3">An example is to the right: The test is instantiating the class "Division" from
+                        <li class="mb-5">An example is to the right: The test is instantiating the class "Division" from
                             the
                             calculations file. The object "calculation" is then created, from which the test can then
                             run its assertion against
@@ -115,7 +117,7 @@
                             "def f()" appearing in 2 different namespaces, but this can never be so within a single
                             namespace
                         </li>
-                        <li class="mb-3">As long as each instance is in a different namespace, they're all maintained
+                        <li class="mb-5">As long as each instance is in a different namespace, they're all maintained
                             separately and won't interfere
                         </li>
                     </ul>
@@ -179,7 +181,7 @@
                         <li class="mb-2">The interpreter completely ignores type hints, so if a non-hinted at type is
                             passed through the function will still continue to run
                         </li>
-                        <li class="mb-4">An example is to the right: "tuple_list:" is type-hinting that it should be a
+                        <li class="mb-5">An example is to the right: "tuple_list:" is type-hinting that it should be a
                             tuple
                         </li>
                     </ul>
@@ -209,7 +211,7 @@
                             elaborates on this with "Type Casting is the method to convert the variable data type into a
                             certain data type in order to the operation required to be performed by users."
                         </li>
-                        <li class="mb-4">An example here: in the for-loop, each item is being type-cast as
+                        <li class="mb-5">An example here: in the for-loop, each item is being type-cast as
                             "(float(item))"
                         </li>
                     </ul>
@@ -302,7 +304,7 @@
                             __init__(self, tuple_list: tuple):"
                         </li>
                         <ul>
-                            <li class="mb-4">When "Calculation(X)" is called, the <i>self</i> attribute will auto-assign
+                            <li class="mb-5">When "Calculation(X)" is called, the <i>self</i> attribute will auto-assign
                                 whatever "X"
                                 is to that instance attribute
                             </li>
@@ -326,7 +328,7 @@
                         <li class="mb-2">Appearing as variables, they are instead properties because they are created
                             within and a part of a class when it is called
                         </li>
-                        <li class="mb-4">In the example to the right, the property is the result and return for
+                        <li class="mb-5">In the example to the right, the property is the result and return for
                             "self.values"
                         </li>
                     </ul>
@@ -348,7 +350,7 @@
                         <li class="mb-2">Appearing as variables, they are instead properties because they are created
                             within and a part of a class when it is called
                         </li>
-                        <li class="mb-4">In the example to the right, the property is the result and return for
+                        <li class="mb-5">In the example to the right, the property is the result and return for
                             "calculation"
                         </li>
                     </ul>
@@ -381,7 +383,7 @@
                         <li class="mb-2">A class is an example of Encapsulation, as it encapsulates all the data for its
                             member functions, variables, etc
                         </li>
-                        <li class="mb-4">In the example to the right Encapsulation is seen with the class "Subtraction"
+                        <li class="mb-5">In the example to the right Encapsulation is seen with the class "Subtraction"
                             as all the data and methods for that class to be invoked are within the class
                         </li>
                     </ul>
@@ -443,7 +445,7 @@
                             called the return output will be correct for whatever one was called
                         </li>
                         <ul>
-                            <li class="mb-4">They are both inheriting from their parent class "(Calculation)"</li>
+                            <li class="mb-5">They are both inheriting from their parent class "(Calculation)"</li>
                         </ul>
                     </ul>
                 </ul>
@@ -457,46 +459,542 @@
         <div class="row">
             <div class="col-6">
                 <ul>
-                    <li class="mb-2"><b>ABSTRACTION</b> =</li>
+                    <li class="mb-2"><b>ABSTRACTION</b> =<a
+                            href="https://www.askpython.com/python/oops/abstraction-in-python">askpython.com</a>
+                        details that Abstraction is used to hide internal details and display the necessary
+                        functionalities - meaning displaying content in such a matter that only the essential functions
+                        get displayed to the user
+                    </li>
+                    <ul>
+                        <li class="mb-2">In this idea, the user knows what they are doing but not exactly how the work
+                            they are implementing is being fully processed
+                        </li>
+                        <li class="mb-2">Abstract Classes serve as the blueprints for other classes - they allow you to
+                            create a set of methods that must be created within any child classes built from the
+                            abstract class. A class which contains one or more abstract methods is called an abstract
+                            class
+                        </li>
+                        <li class="mb-5">In the example to the right, an example of Abstraction is shown from the
+                            calculations file
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-6 mt-2 mb-4">
+                <img
+                        src="static\images\AbsExample1.png" class="img-fluid"
+                        alt="Abstraction code ex">
+                <img
+                        src="static\images\AbsExample2.png" class="img-fluid"
+                        alt="Abstraction code ex 2">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <ul>
+                    <li class="mb-2"><b>S.O.L.I.D. (Overview)</b> = is an acronym that details the five principles of
+                        OOP design, or OOD. Each letter of the acronym is broken down for meaning below. As written by
+                        <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design">digitalocean.com</a>'s
+                        website, "These principles establish practices that lend to developing software with
+                        considerations for maintaining and extending as the project grows. Adopting these practices can
+                        also contribute to avoiding code smells, refactoring code, and Agile or Adaptive software
+                        development."
+                    </li>
+                    <ul>
+                        <li class="mb-2"><a
+                                href="https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/">freeCodeCamp</a>
+                            goes on to say that these principles were first introduced by Robert "Uncle Bob" Martin and
+                            were invented/refined in order to create understandable, readable, and testable code that
+                            many developers can collaboratively work on
+                        </li>
+                        <li>The acronym for SOLID is broken out here, but we will see examples of these principles in
+                            my code further down the page:
+                        </li>
+                        <ul>
+                            <li><u>S = single-responsibility principle:</u></li>
+                            <ul>
+                                <li class="mb-2">a class should do one thing and do it well; should only have a single
+                                    reason to change
+                                </li>
+                            </ul>
+                            <li><u>O = open-closed principle:</u></li>
+                            <ul>
+                                <li class="mb-2">objects or entities should be open for extension but closed for
+                                    modifications; a class should be extendable without modifying the class itself
+                                </li>
+                            </ul>
+                            <li><u>L = Liskov substitution principle:</u></li>
+                            <ul>
+                                <li class="mb-2">every subclass or derived class should be substitutable for their base
+                                    or parent class; This means that, given that "class B" is a subclass of "class A",
+                                    we
+                                    should be able to pass an object of class B to any method that expects an object of
+                                    class A and the method should not give any weird output in that case
+                                </li>
+                            </ul>
+                            <li><u>I = interface segregation principle:</u></li>
+                            <ul>
+                                <li class="mb-2">that many client-specific interfaces are better
+                                    than one general-purpose interface - clients should not be forced to implement a
+                                    function they do not need
+                                </li>
+                            </ul>
+                            <li><u>D = dependency inversion principle:</u></li>
+                            <ul>
+                                <li class="mb-5">classes should depend upon interfaces or abstract classes instead of
+                                    concrete classes and functions; a high-level module must not depend on a low-level
+                                    module, but it should depend on abstractions
+                                </li>
+                            </ul>
+                        </ul>
+                    </ul>
                 </ul>
             </div>
         </div>
         <div class="row">
-            <div class="col-6">
+            <div class="col-8">
                 <ul>
-                    <li class="mb-2"><b>S.O.L.I.D.</b> =</li>
+                    <li class="mb-2"><b>DESIGN PATTERNS (Overview)</b> = According to <a
+                            href="https://refactoring.guru/design-patterns">Refactoring Guru</a>, Design Patterns in OOP
+                        are typical solutions to common problems in software design. Each pattern can work like a
+                        blueprint that you can customize to solve a specific issue in code
+                    </li>
+                    <ul>
+                        <li class="mb-2">Although not a literal block of code that can be copied/pasted, they are
+                            general concepts for solving particular problems
+                        </li>
+                        <li class="mb-2">I go into a bit more detail about Design Patterns below, but there are 3 main
+                            types of which we have learned so far: <u>Creational</u>(e.g. Factory Method),
+                            <u>Structural</u>(e.g. Bridge),
+                            and <u>Behavioral</u>(e.g. Command)
+                    </ul>
                 </ul>
             </div>
         </div>
-        <div class="row">
-            <div class="col-6">
-                <ul>
-                    <li class="mb-2"><b>DESIGN PATTERNS</b> =</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row mt-3">
+        <div class="row mt-5">
             <div class="col-8">
                 <h2>AAA TESTING WITH PYTHON</h2>
+                <p>
+                    Testing in software development is incredibly important. <a
+                        href="https://theqalead.com/topics/what-are-automation-testing-tools/">The QA Lead</a> states,
+                    "Test automation is the process of testing various parts of new software with little to no human
+                    involvement. Essentially, it makes sure every aspect of a software design works without a human
+                    sitting in front of a computer devoting hours to manual tests."
+                </p>
+                <p>
+                    It does not take an experienced mind to be able to understand that proper testing will allow for
+                    code to be developed more efficiently, accurately, and with less errors to the overall project. <u>Automated
+                    Testing</u>
+                    makes this even more true, because it removes the need to have humans sitting for hours on end
+                    conducting
+                    manual tests. Benefits of Automation Testing include:
+                <ul>
+                    <li>Ability to easily scan multilingual sites</li>
+                    <li>Able to handle test cases that are repeated throughout an application</li>
+                    <li>Able to easily parse through cases that would be very tedious for manual testing</li>
+                    <li>Cases that are more broad or expansive can be easily automated</li>
+                    <li>Speed, consistency, cost savings, faster times to market</li>
+                </ul>
+                </p>
+                <p>
+                    <a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">Automation
+                        Panda</a>
+                    additionally elaborates on testing that, "A test is a procedure that exercises a behavior to
+                    determine if the behavior functions correctly."
+                    Testing is important because it provides empirical feedback during and for development of code. <b>AAA
+                    Testing</b> is a pattern for
+                    structuring test cases that will generally allow for the best process and feedback. It stands for
+                    <b>Arrange</b> - <b>Act</b> - <b>Assert</b>.
+                </p>
             </div>
             <div class="col-4">
-                <h2>PLACEHOLDER FOR IMAGERY</h2>
+                <a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/"><img
+                        style="border:1px solid black;"
+                        src="static\images\AutoPanda.png" class="img-fluid"
+                        alt="Automation Panda link"></a>
+                <img class="mt-4"
+                     src="static\images\TestingArrangeExample.png"
+                     class="img-fluid"
+                     alt="Arrange ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <ul>
+                    <li class="mb-1"><b>ARRANGE</b> - sets up the test cases, assembling any required inputs and targets
+                    </li>
+                    <ul>
+                        <li class="mb-2">In the first code example image on the right, you can see an example of the
+                            Arrange step in my test code, where the tuple_list_1 and _2 are being populated for the
+                            tests
+                            to run with
+                        </li>
+                    </ul>
+                    <li class="mb-1"><b>ACT</b> - calling a function or method, interacting with a web page, etc. <i>Acting</i>
+                        on the target behavior that is being tested
+                    </li>
+                    <ul>
+                        <li class="mb-2">In the second code example on the right, you can see an example of Act. "result
+                            =
+                            Calculator.add(tuple_list_1())" is calling the function and populating an answer for the
+                            test to be
+                            ran against
+                        </li>
+                    </ul>
+                    <li class="mb-1"><b>ASSERT</b> - verify whether the test has passed or failed via the parameters
+                        that were expected. <i>Act</i> should elicit a response for the test
+                        to assess. <i>Assert</i> is then there to say "expected outcome received" or "expected outcome
+                        NOT received"
+                    </li>
+                    <ul>
+                        <li class="mb-2">In the 3rd code example to the right, you can see the assert statements for
+                            division and division by 0 error
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-4">
+                <img class="mt-3"
+                     src="static\images\TestingActExample.png" class="img-fluid"
+                     alt="Act ex">
+                <img class="mt-4"
+                     src="static\images\TestingAssertExample.png" class="img-fluid"
+                     alt="Assert ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10 mt-3">
+                <h3>Tutorial Steps for Creating AAA Test Cases</h3>
+                <ol>
+                    <li class="mb-2">Understand what it is that you are testing - the specific classes/methods/functions
+                        that
+                        need to be ensured as operative
+                    </li>
+                    <li>For <u>Pytest</u>, tests must be located in a file that ends in the nomenclature
+                        "_test.py" otherwise it will not work. An example from my code is "calculator_test.py" in the
+                        tests
+                        directory
+                    </li>
+                    <ul>
+                        <li class="mb-2">Additionally, test functions themselves must have "test_" at the beginning of
+                            their name
+                            so that Pytest knows to run them
+                        </li>
+                        <li class="mb-2">In the 2nd and 3rd code examples above and to the right, you can see that the
+                            tests
+                            are named "def test_calculator_add_method():" and "def test_calculator_operations_divide():"
+                            respectively
+                        </li>
+                    </ul>
+                    <li class="mb-2"><i>Arrange</i> any information that is needed for the test to work, such as the
+                        tuple_list_1 & _2 in the previous 1st code example, above and to the right
+                    </li>
+                    <li class="mb-2"><i>Act</i> on that information by calling the respective methods or functions that
+                        we will run the test against, such as the "result" property in the 2nd code example above
+                    </li>
+                    <li class="mb-4"><i>Assert</i> the test statement with the correct, expected outcome from the test
+                        so that pass or
+                        fail can be determined, like in the 3rd code example above and to the right for Division
+                    </li>
+                </ol>
             </div>
         </div>
         <div class="row mt-3">
+            <div class="col mb-2">
+                <h3>Pytest and Coverage Reports for this code</h3>
+                <img
+                        src="static\images\PytestResult.png" class="img-fluid"
+                        alt="PyTest">
+            </div>
+        </div>
+        <div clss="row">
+            <div class="col mb-2">
+                <img
+                        src="static\images\PytestResult2.png" class="img-fluid"
+                        alt="PyTest 2">
+            </div>
+        </div>
+        <div clss="row">
+            <div class="col mb-4">
+                <img
+                        src="static\images\CoverageResult.png" class="img-fluid"
+                        alt="Coverage Report">
+            </div>
+        </div>
+        <div class="row mt-5">
             <div class="col-8">
                 <h2>PRINCIPLES OF OOP</h2>
+                <p>
+                    Alluded to above, in the Glossary section, there are 4 Principles of Object Oriented Programming:
+                    <b>Encapsulation</b>, <b>Inheritance</b>, <b>Polymorphism</b>, and <b>Abstraction</b>. They are
+                    defined
+                    with
+                    examples above, but the breakdowns and examples from the application itself are repeated here.
+                </p>
+                <p>
+                    <b><span class="orangered">Encapsulation</span></b> is "the idea of wrapping data and the methods
+                    that
+                    work on data within one unit.
+                    This puts restrictions on accessing variables and methods directly and can prevent the accidental
+                    modification of data.", according to <a
+                        href="https://www.geeksforgeeks.org/encapsulation-in-python/">GeeksforGeeks</a>.
+                    A class in Python is an example of encapsulation as it encapsulates all the data for its member
+                    functions, variables, etc.
+                </p>
+                <p>
+                    Below is an example of how this principle is implemented in my web application:
+                </p>
+                <img class="mb-3"
+                     src="static\images\EncapsulationExample.png" class="img-fluid"
+                     alt="Encapsulation ex">
             </div>
-            <div class="col-4">
-                <h2>PLACEHOLDER FOR IMAGERY</h2>
+            <div class="col-4 pt-5 mt-5">
+                <img style="border:1px solid black;"
+                     src="static\images\EncapsulationImage.png" class="img-fluid"
+                     alt="Encapsulation image">
             </div>
         </div>
-        <div class="row mt-3">
+        <div class="row">
             <div class="col-8">
-                <h2>S.O.L.I.D. PROGRAMMING</h2>
+                <p>
+                    <b><span class="orangered">Inheritance</span></b> is the capability of one class to derive or
+                    inherit
+                    properties from
+                    another class, <a href="https://www.geeksforgeeks.org/inheritance-in-python/">GeeksforGeeks</a>
+                    writes.
+                    This allows for the re-usability of code so that functions and classes don't have to be re-written
+                    in
+                    many places. It is also
+                    transitive in nature, meaning that all children classes will inherit all the methods of their
+                    parents,
+                    and whatever parents their parents have - all the way in the chain
+                    as long as it has been defined properly.
+                </p>
+                <p>
+                    Below is an example of how this principle is implemented in my web application. You can see that the
+                    class
+                    "Division" is inheriting from its parent class "(Calculation)" :
+                </p>
+                <img class="mb-3"
+                     src="static\images\InheritanceExample.png" class="img-fluid"
+                     alt="Inheritance ex">
+            </div>
+            <div class="col-4 mt-4">
+                <img style="border:1px solid black;"
+                     src="static\images\InheritanceImage.png" class="img-fluid"
+                     alt="Inheritance image">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <p>
+                    <b><span class="orangered">Abstraction</span></b>, as written by <a
+                        href="https://www.geeksforgeeks.org/abstract-classes-in-python/">GeeksforGeeks</a>, is
+                    considered to be a blueprint for other classes. It allows for the creation of a set of methods that
+                    must
+                    be created within
+                    any child classes built from the abstract class.
+                </p>
+                <p>
+                    Furthermore, <a
+                        href="https://www.askpython.com/python/oops/abstraction-in-python">askpython.com</a> details
+                    that
+                    Abstraction is used to hide internal details and display the necessary functionalities - meaning
+                    displaying content in such a matter that only the essential functions get displayed to the user.
+                </p>
+                <p>
+                    Below is an example of how this principle is implemented in my web application. You can see that the
+                    "calculator.operations"
+                    classes are being imported for use by classes in this file. The "Addition():" class within this file
+                    then calls
+                    for "Add.add()" having abstracted that method from another file.
+                </p>
+                <img
+                        src="static\images\AbsExample1.png" class="img-fluid"
+                        alt="Abstraction ex">
+                <img class="mb-3"
+                     src="static\images\AbsExample2.png" class="img-fluid"
+                     alt="Abstraction ex">
+            </div>
+            <div class="col-4 pt-5 mt-5">
+                <img style="border:1px solid black;"
+                     src="static\images\AbstractImage.png" class="img-fluid"
+                     alt="Abstraction image">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <p>
+                    <b><span class="orangered">Polymorphism</span></b> is having the same function-name being used for
+                    different types.
+                    <a href="https://www.freecodecamp.org/news/object-oriented-programming-concepts-21bb035f7260/">freeCodeCamp.org</a>
+                    states
+                    that polymorphism gives a way to use a class exactly like its parent so there’s no confusion with
+                    mixing types.
+                    But each child class keeps its own methods as they are.
+                </p>
+                <p>
+                    In the example below, Polymorphism can be seen via the methods "get_result(self)" That method
+                    is available for both "Addition" and "Multiplication", but if called the return output will be
+                    correct for whatever one specific child called the method. They are both inheriting from their
+                    parent
+                    class "(Calculation)" and then altering the output as needed for their class.
+                </p>
+                <img
+                        src="static\images\PolyExample.png" class="img-fluid"
+                        alt="Polymorphism ex">
             </div>
             <div class="col-4">
-                <h2>PLACEHOLDER FOR IMAGERY</h2>
+                <img
+                        src="static\images\PolymorphismImage.png" class="img-fluid"
+                        alt="Polymorphism image">
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-8">
+                <h2>S.O.L.I.D. PROGRAMMING PRINCIPLES</h2>
+                <p>
+                    In the glossary above I detailed a brief overview of the SOLID principles of OOP as well as Design
+                    Patterns in OOP.
+                    Repeated here again, the SOLID acronym is:
+                </p>
+                <ul>
+                    <li><u>S = single-responsibility principle:</u></li>
+                    <ul>
+                        <li>a class should do one thing and do it well; should only have a single
+                            reason to change. The example below shows how the class "Addition:" only handles that one
+                            operation. Not subtraction, multiplication, or division as well
+                        </li>
+                        <li class="mb-2"><img
+                                src="static\images\SingleEx.png" class="img-fluid"
+                                alt="SingleR image">
+                        </li>
+                    </ul>
+                    <li><u>O = open-closed principle:</u></li>
+                    <ul>
+                        <li class="mb-2">objects or entities should be open for extension but closed for
+                            modifications; a class should be extendable without modifying the class itself.
+                            <a href="https://www.baeldung.com/solid-principles">Baeldung</a> also states that in
+                            following this principle, we stop
+                            ourselves from modifying existing code and causing potential new bugs
+                        </li>
+                        <li>
+                            In the example below you can see this being implemented with the
+                            "Multiplication(Calculation):" class.
+                            This class can inherit and use all the methods attributes it needs to from its parent, while
+                            only modifying content in itself. The parent will remain as is regardless.
+                        </li>
+                        <li class="mb-2">
+                            <img
+                                    src="static\images\OpenCloseEx.png" class="img-fluid"
+                                    alt="OpenClose image">
+                        </li>
+                    </ul>
+                    <li><u>L = Liskov substitution principle:</u></li>
+                    <ul>
+                        <li class="mb-2">every subclass or derived class should be substitutable for their base
+                            or parent class; This means that, given that "class B" is a subclass of "class A",
+                            we
+                            should be able to pass an object of class B to any method that expects an object of
+                            class A and the method should not give any weird output in that case
+                        </li>
+                        <li>
+                            The child class extends the behavior of its parent, but never narrows it down.
+                            An example of this principle being followed is below: where both of these Child Classes are
+                            pulling from the parent "Calculation" and each have their own "get_result():" methods, which
+                            operate
+                            in similarly expected ways without interfering with each other or the parent.
+                        </li>
+                        <li class="mb-2">
+                            <img
+                                    src="static\images\LiskovEx.png" class="img-fluid"
+                                    alt="Liskov image">
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-4 mt-5">
+                <img
+                        src="static\images\SOLID.png" class="img-fluid"
+                        alt="SOLID image">
+                <img class="mt-5" style="border:1px solid black;"
+                     src="static\images\SOLID2.png" class="img-fluid"
+                     alt="SOLID2 image">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <ul>
+                    <li><u>I = interface segregation principle:</u></li>
+                    <ul>
+                        <li class="mb-2">that many client-specific interfaces are better
+                            than one general-purpose interface - clients should not be forced to implement a
+                            function they do not need. <a href="https://www.baeldung.com/solid-principles">Baeldung</a>
+                            states
+                            that larger interfaces should be broken down into smaller ones.
+                            By doing so, we can ensure that implementing classes only need to be concerned about the
+                            methods that are of interest to them
+                        </li>
+                        <li>
+                            An example of this can be seen below. Instead of importing every class within the
+                            "calculator.calculations" file
+                            we only need to import the "Addition" class. Nothing else is needed and won't be used or
+                            affected.
+                        </li>
+                        <li class="mb-2">
+                            <img
+                                    src="static\images\InterfaceEx.png" class="img-fluid"
+                                    alt="Interface image">
+                        </li>
+                    </ul>
+                    <li><u>D = dependency inversion principle:</u></li>
+                    <ul>
+                        <li class="mb-2">classes should depend upon interfaces or abstract classes instead of
+                            concrete classes and functions; a high-level module must not depend on a low-level
+                            module, but it should depend on abstractions
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/">freeCodeCamp</a> says, "
+                            The Dependency Inversion principle states that our classes should depend upon interfaces or abstract classes
+                            instead of concrete classes and functions." This process allows for decoupling
+                        </li>
+                        <li>
+                            An example of this is provided below. All of the operations needed are imported from the
+                            "calculator.calculations" file. They do not interfere with one another, and each method in
+                            the "Calculator" class can interface with the operations as they need to. Changes to the other classes here in this
+                            file will not affect individual methods
+                        </li>
+                        <li class="mb-3">
+                            <img
+                                    src="static\images\DependencyEx.png" class="img-fluid"
+                                    alt="Dependency image">
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-6">
+                <h3>Design Patterns</h3>
+                <p>
+                    According to <a
+                        href="https://refactoring.guru/design-patterns">Refactoring Guru</a>, Design Patterns in OOP
+                    are typical solutions to common problems in software design. Each pattern can work like a
+                    blueprint that you can customize to solve a specific issue in code. Although not a literal block of
+                    code that can be copied/pasted, they are
+                    general concepts for solving particular problems.
+                </p>
+                <p>
+                    In this web application we utilize one design pattern called <b>The Factory Method</b>. This is a
+                    creational design pattern that provides an interface for creating objects in a superclass, but
+                    allows subclasses to alter the type of objects that will be created. An example of this is seen
+                    to the right. The "def create" is the factory method.
+                </p>
+            </div>
+            <div class="col-6">
+                <img
+                                    src="static\images\FactoryEx.png" class="img-fluid"
+                                    alt="Factory image">
             </div>
         </div>
     </div>

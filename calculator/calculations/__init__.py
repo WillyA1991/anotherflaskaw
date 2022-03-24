@@ -71,8 +71,5 @@ class Division(Calculation):
         """returns the results of the division"""
         division_of_values = 1.0
         for value in self.values:
-            try:
-                division_of_values = Div.divide(division_of_values, value)
-            except ZeroDivisionError:
-                return "Cannot divide by 0"
+            division_of_values = Div.divide(division_of_values, value)
         return division_of_values
