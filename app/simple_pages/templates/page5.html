@@ -726,54 +726,63 @@
                 <h2>PRINCIPLES OF OOP</h2>
                 <p>
                     Alluded to above, in the Glossary section, there are 4 Principles of Object Oriented Programming:
-                    <b>Encapsulation</b>, <b>Inheritance</b>, <b>Polymorphism</b>, and <b>Abstraction</b>. They are defined
+                    <b>Encapsulation</b>, <b>Inheritance</b>, <b>Polymorphism</b>, and <b>Abstraction</b>. They are
+                    defined
                     with
                     examples above, but the breakdowns and examples from the application itself are repeated here.
                 </p>
                 <p>
-                    <b><span class="orangered">Encapsulation</span></b> is "the idea of wrapping data and the methods that
+                    <b><span class="orangered">Encapsulation</span></b> is "the idea of wrapping data and the methods
+                    that
                     work on data within one unit.
                     This puts restrictions on accessing variables and methods directly and can prevent the accidental
-                    modification of data.", according to <a href="https://www.geeksforgeeks.org/encapsulation-in-python/">GeeksforGeeks</a>.
-                    A class in Python is an example of encapsulation as it encapsulates all the data for its member functions, variables, etc.
+                    modification of data.", according to <a
+                        href="https://www.geeksforgeeks.org/encapsulation-in-python/">GeeksforGeeks</a>.
+                    A class in Python is an example of encapsulation as it encapsulates all the data for its member
+                    functions, variables, etc.
                 </p>
                 <p>
                     Below is an example of how this principle is implemented in my web application:
                 </p>
                 <img class="mb-3"
-                            src="static\images\EncapsulationExample.png" class="img-fluid"
-                            alt="Encapsulation ex">
+                     src="static\images\EncapsulationExample.png" class="img-fluid"
+                     alt="Encapsulation ex">
             </div>
             <div class="col-4 pt-5 mt-5">
                 <img style="border:1px solid black;"
-                            src="static\images\EncapsulationImage.png" class="img-fluid"
-                        alt="Encapsulation image">
+                     src="static\images\EncapsulationImage.png" class="img-fluid"
+                     alt="Encapsulation image">
             </div>
         </div>
         <div class="row">
             <div class="col-8">
                 <p>
-                    <b><span class="orangered">Inheritance</span></b> is the capability of one class to derive or inherit
+                    <b><span class="orangered">Inheritance</span></b> is the capability of one class to derive or
+                    inherit
                     properties from
-                    another class, <a href="https://www.geeksforgeeks.org/inheritance-in-python/">GeeksforGeeks</a> writes.
-                    This allows for the re-usability of code so that functions and classes don't have to be re-written in
+                    another class, <a href="https://www.geeksforgeeks.org/inheritance-in-python/">GeeksforGeeks</a>
+                    writes.
+                    This allows for the re-usability of code so that functions and classes don't have to be re-written
+                    in
                     many places. It is also
-                    transitive in nature, meaning that all children classes will inherit all the methods of their parents,
+                    transitive in nature, meaning that all children classes will inherit all the methods of their
+                    parents,
                     and whatever parents their parents have - all the way in the chain
                     as long as it has been defined properly.
                 </p>
                 <p>
-                    Below is an example of how this principle is implemented in my web application. You can see that the class
+                    Below is an example of how this principle is implemented in my web application. You can see that the
+                    class
                     "Division" is inheriting from its parent class "(Calculation)" :
                 </p>
                 <img class="mb-3"
-                            src="static\images\InheritanceExample.png" class="img-fluid"
-                            alt="Inheritance ex">
+                     src="static\images\InheritanceExample.png" class="img-fluid"
+                     alt="Inheritance ex">
             </div>
             <div class="col-4 mt-4">
                 <img style="border:1px solid black;"
-                            src="static\images\InheritanceImage.png" class="img-fluid"
-                        alt="Inheritance image">
+                     src="static\images\InheritanceImage.png" class="img-fluid"
+                     alt="Inheritance image">
             </div>
         </div>
         <div class="row">
@@ -781,13 +790,15 @@
                 <p>
                     <b><span class="orangered">Abstraction</span></b>, as written by <a
                         href="https://www.geeksforgeeks.org/abstract-classes-in-python/">GeeksforGeeks</a>, is
-                    considered to be a blueprint for other classes. It allows for the creation of a set of methods that must
+                    considered to be a blueprint for other classes. It allows for the creation of a set of methods that
+                    must
                     be created within
                     any child classes built from the abstract class.
                 </p>
                 <p>
                     Furthermore, <a
-                        href="https://www.askpython.com/python/oops/abstraction-in-python">askpython.com</a> details that
+                        href="https://www.askpython.com/python/oops/abstraction-in-python">askpython.com</a> details
+                    that
                     Abstraction is used to hide internal details and display the necessary functionalities - meaning
                     displaying content in such a matter that only the essential functions get displayed to the user.
                 </p>
@@ -814,15 +825,19 @@
         <div class="row">
             <div class="col-8">
                 <p>
-                    <b><span class="orangered">Polymorphism</span></b> is having the same function-name being used for different types.
-                    <a href="https://www.freecodecamp.org/news/object-oriented-programming-concepts-21bb035f7260/">freeCodeCamp.org</a> states
-                    that polymorphism gives a way to use a class exactly like its parent so there’s no confusion with mixing types.
+                    <b><span class="orangered">Polymorphism</span></b> is having the same function-name being used for
+                    different types.
+                    <a href="https://www.freecodecamp.org/news/object-oriented-programming-concepts-21bb035f7260/">freeCodeCamp.org</a>
+                    states
+                    that polymorphism gives a way to use a class exactly like its parent so there’s no confusion with
+                    mixing types.
                     But each child class keeps its own methods as they are.
                 </p>
                 <p>
                     In the example below, Polymorphism can be seen via the methods "get_result(self)" That method
                     is available for both "Addition" and "Multiplication", but if called the return output will be
-                    correct for whatever one specific child called the method. They are both inheriting from their parent
+                    correct for whatever one specific child called the method. They are both inheriting from their
+                    parent
                     class "(Calculation)" and then altering the output as needed for their class.
                 </p>
                 <img
@@ -831,19 +846,131 @@
             </div>
             <div class="col-4">
                 <img
-                     src="static\images\PolymorphismImage.png" class="img-fluid"
-                     alt="Polymorphism image">
+                        src="static\images\PolymorphismImage.png" class="img-fluid"
+                        alt="Polymorphism image">
             </div>
         </div>
         <div class="row mt-5">
             <div class="col-8">
                 <h2>S.O.L.I.D. PROGRAMMING PRINCIPLES</h2>
                 <p>
-                    asdfdsfa
+                    In the glossary above I detailed a brief overview of the SOLID principles of OOP as well as Design
+                    Patterns in OOP.
+                    Repeated here again, the SOLID acronym is:
                 </p>
+                <ul>
+                    <li><u>S = single-responsibility principle:</u></li>
+                    <ul>
+                        <li>a class should do one thing and do it well; should only have a single
+                            reason to change. The example below shows how the class "Addition:" only handles that one
+                            operation. Not subtraction, multiplication, or division as well
+                        </li>
+                        <li class="mb-2"><img
+                                src="static\images\SingleEx.png" class="img-fluid"
+                                alt="SingleR image">
+                        </li>
+                    </ul>
+                    <li><u>O = open-closed principle:</u></li>
+                    <ul>
+                        <li class="mb-2">objects or entities should be open for extension but closed for
+                            modifications; a class should be extendable without modifying the class itself.
+                            <a href="https://www.baeldung.com/solid-principles">Baeldung</a> also states that in
+                            following this principle, we stop
+                            ourselves from modifying existing code and causing potential new bugs
+                        </li>
+                        <li>
+                            In the example below you can see this being implemented with the
+                            "Multiplication(Calculation):" class.
+                            This class can inherit and use all the methods attributes it needs to from its parent, while
+                            only modifying content in itself. The parent will remain as is regardless.
+                        </li>
+                        <li class="mb-2">
+                            <img
+                                    src="static\images\OpenCloseEx.png" class="img-fluid"
+                                    alt="OpenClose image">
+                        </li>
+                    </ul>
+                    <li><u>L = Liskov substitution principle:</u></li>
+                    <ul>
+                        <li class="mb-2">every subclass or derived class should be substitutable for their base
+                            or parent class; This means that, given that "class B" is a subclass of "class A",
+                            we
+                            should be able to pass an object of class B to any method that expects an object of
+                            class A and the method should not give any weird output in that case
+                        </li>
+                        <li>
+                            The child class extends the behavior of its parent, but never narrows it down.
+                            An example of this principle being followed is below: where both of these Child Classes are
+                            pulling from the parent "Calculation" and each have their own "get_result():" methods, which
+                            operate
+                            in similarly expected ways without interfering with each other or the parent.
+                        </li>
+                        <li class="mb-2">
+                            <img
+                                    src="static\images\LiskovEx.png" class="img-fluid"
+                                    alt="Liskov image">
+                        </li>
+                    </ul>
+                </ul>
             </div>
-            <div class="col-4">
-                <h2>PLACEHOLDER FOR IMAGERY</h2>
+            <div class="col-4 mt-5">
+                <img
+                        src="static\images\SOLID.png" class="img-fluid"
+                        alt="SOLID image">
+                <img class="mt-5" style="border:1px solid black;"
+                     src="static\images\SOLID2.png" class="img-fluid"
+                     alt="SOLID2 image">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <ul>
+                    <li><u>I = interface segregation principle:</u></li>
+                    <ul>
+                        <li class="mb-2">that many client-specific interfaces are better
+                            than one general-purpose interface - clients should not be forced to implement a
+                            function they do not need. <a href="https://www.baeldung.com/solid-principles">Baeldung</a>
+                            states
+                            that larger interfaces should be broken down into smaller ones.
+                            By doing so, we can ensure that implementing classes only need to be concerned about the
+                            methods that are of interest to them
+                        </li>
+                        <li>
+                            An example of this can be seen below. Instead of importing every class within the
+                            "calculator.calculations" file
+                            we only need to import the "Addition" class. Nothing else is needed and won't be used or
+                            affected.
+                        </li>
+                        <li class="mb-2">
+                            <img
+                                    src="static\images\InterfaceEx.png" class="img-fluid"
+                                    alt="Interface image">
+                        </li>
+                    </ul>
+                    <li><u>D = dependency inversion principle:</u></li>
+                    <ul>
+                        <li class="mb-2">classes should depend upon interfaces or abstract classes instead of
+                            concrete classes and functions; a high-level module must not depend on a low-level
+                            module, but it should depend on abstractions
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/">freeCodeCamp</a> says, "
+                            The Dependency Inversion principle states that our classes should depend upon interfaces or abstract classes
+                            instead of concrete classes and functions." This process allows for decoupling
+                        </li>
+                        <li>
+                            An example of this is provided below. All of the operations needed are imported from the
+                            "calculator.calculations" file. They do not interfere with one another, and each method in
+                            the "Calculator" class can interface with the operations as they need to. Changes to the other classes here in this
+                            file will not affect individual methods
+                        </li>
+                        <li class="mb-5">
+                            <img
+                                    src="static\images\DependencyEx.png" class="img-fluid"
+                                    alt="Dependency image">
+                        </li>
+                    </ul>
+                </ul>
             </div>
         </div>
     </div>
