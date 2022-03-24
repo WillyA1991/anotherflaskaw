@@ -23,10 +23,12 @@
                         memory or on disk."
                     </li>
                     <ul>
-                        <li>Instantiation is the process of taking a class definition and creating an object that then
+                        <li class="mb-2">Instantiation is the process of taking a class definition and creating an
+                            object that then
                             can be used in a program
                         </li>
-                        <li>An <u>Instance</u> is an object that is built from a class and that contains real data
+                        <li class="mb-4">An <u>Instance</u> is an object that is built from a class and that contains
+                            real data
                     </ul>
                 </ul>
             </div>
@@ -64,7 +66,7 @@
                         <li class="mb-2">they are entities that have state, identity, and behavior associated with
                             them
                         </li>
-                        <li class="mb-3">An example is to the right: The test is instantiating the class "Division" from
+                        <li class="mb-5">An example is to the right: The test is instantiating the class "Division" from
                             the
                             calculations file. The object "calculation" is then created, from which the test can then
                             run its assertion against
@@ -115,7 +117,7 @@
                             "def f()" appearing in 2 different namespaces, but this can never be so within a single
                             namespace
                         </li>
-                        <li class="mb-3">As long as each instance is in a different namespace, they're all maintained
+                        <li class="mb-5">As long as each instance is in a different namespace, they're all maintained
                             separately and won't interfere
                         </li>
                     </ul>
@@ -179,7 +181,7 @@
                         <li class="mb-2">The interpreter completely ignores type hints, so if a non-hinted at type is
                             passed through the function will still continue to run
                         </li>
-                        <li class="mb-4">An example is to the right: "tuple_list:" is type-hinting that it should be a
+                        <li class="mb-5">An example is to the right: "tuple_list:" is type-hinting that it should be a
                             tuple
                         </li>
                     </ul>
@@ -209,7 +211,7 @@
                             elaborates on this with "Type Casting is the method to convert the variable data type into a
                             certain data type in order to the operation required to be performed by users."
                         </li>
-                        <li class="mb-4">An example here: in the for-loop, each item is being type-cast as
+                        <li class="mb-5">An example here: in the for-loop, each item is being type-cast as
                             "(float(item))"
                         </li>
                     </ul>
@@ -302,7 +304,7 @@
                             __init__(self, tuple_list: tuple):"
                         </li>
                         <ul>
-                            <li class="mb-4">When "Calculation(X)" is called, the <i>self</i> attribute will auto-assign
+                            <li class="mb-5">When "Calculation(X)" is called, the <i>self</i> attribute will auto-assign
                                 whatever "X"
                                 is to that instance attribute
                             </li>
@@ -326,7 +328,7 @@
                         <li class="mb-2">Appearing as variables, they are instead properties because they are created
                             within and a part of a class when it is called
                         </li>
-                        <li class="mb-4">In the example to the right, the property is the result and return for
+                        <li class="mb-5">In the example to the right, the property is the result and return for
                             "self.values"
                         </li>
                     </ul>
@@ -348,7 +350,7 @@
                         <li class="mb-2">Appearing as variables, they are instead properties because they are created
                             within and a part of a class when it is called
                         </li>
-                        <li class="mb-4">In the example to the right, the property is the result and return for
+                        <li class="mb-5">In the example to the right, the property is the result and return for
                             "calculation"
                         </li>
                     </ul>
@@ -381,7 +383,7 @@
                         <li class="mb-2">A class is an example of Encapsulation, as it encapsulates all the data for its
                             member functions, variables, etc
                         </li>
-                        <li class="mb-4">In the example to the right Encapsulation is seen with the class "Subtraction"
+                        <li class="mb-5">In the example to the right Encapsulation is seen with the class "Subtraction"
                             as all the data and methods for that class to be invoked are within the class
                         </li>
                     </ul>
@@ -443,7 +445,7 @@
                             called the return output will be correct for whatever one was called
                         </li>
                         <ul>
-                            <li class="mb-4">They are both inheriting from their parent class "(Calculation)"</li>
+                            <li class="mb-5">They are both inheriting from their parent class "(Calculation)"</li>
                         </ul>
                     </ul>
                 </ul>
@@ -472,7 +474,7 @@
                             abstract class. A class which contains one or more abstract methods is called an abstract
                             class
                         </li>
-                        <li class="mb-4">In the example to the right, an example of Abstraction is shown from the
+                        <li class="mb-5">In the example to the right, an example of Abstraction is shown from the
                             calculations file
                         </li>
                     </ul>
@@ -539,7 +541,7 @@
                             </ul>
                             <li><u>D = dependency inversion principle:</u></li>
                             <ul>
-                                <li class="mb-4">classes should depend upon interfaces or abstract classes instead of
+                                <li class="mb-5">classes should depend upon interfaces or abstract classes instead of
                                     concrete classes and functions; a high-level module must not depend on a low-level
                                     module, but it should depend on abstractions
                                 </li>
@@ -562,7 +564,8 @@
                             general concepts for solving particular problems
                         </li>
                         <li class="mb-2">I go into a bit more detail about Design Patterns below, but there are 3 main
-                            types of which we have learned so far: <u>Creational</u>(e.g. Factory Method), <u>Structural</u>(e.g. Bridge),
+                            types of which we have learned so far: <u>Creational</u>(e.g. Factory Method),
+                            <u>Structural</u>(e.g. Bridge),
                             and <u>Behavioral</u>(e.g. Command)
                     </ul>
                 </ul>
@@ -571,9 +574,126 @@
         <div class="row mt-5">
             <div class="col-8">
                 <h2>AAA TESTING WITH PYTHON</h2>
+                <p>
+                    Testing in software development is incredibly important. <a
+                        href="https://theqalead.com/topics/what-are-automation-testing-tools/">The QA Lead</a> states,
+                    "Test automation is the process of testing various parts of new software with little to no human
+                    involvement. Essentially, it makes sure every aspect of a software design works without a human
+                    sitting in front of a computer devoting hours to manual tests."
+                </p>
+                <p>
+                    It does not take an experienced mind to be able to understand that proper testing will allow for
+                    code to be developed more efficiently, accurately, and with less errors to the overall project. <u>Automated
+                    Testing</u>
+                    makes this even more true, because it removes the need to have humans sitting for hours on end
+                    conducting
+                    manual tests. Benefits of Automation Testing include:
+                <ul>
+                    <li>Ability to easily scan multilingual sites</li>
+                    <li>Able to handle test cases that are repeated throughout an application</li>
+                    <li>Able to easily parse through cases that would be very tedious for manual testing</li>
+                    <li>Cases that are more broad or expansive can be easily automated</li>
+                    <li>Speed, consistency, cost savings, faster times to market</li>
+                </ul>
+                </p>
+                <p>
+                    <a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">Automation
+                        Panda</a>
+                    additionally elaborates on testing that, "A test is a procedure that exercises a behavior to
+                    determine if the behavior functions correctly."
+                    Testing is important because it provides empirical feedback during and for development of code. <b>AAA
+                    Testing</b> is a pattern for
+                    structuring test cases that will generally allow for the best process and feedback. It stands for
+                    <b>Arrange</b> - <b>Act</b> - <b>Assert</b>.
+                </p>
             </div>
             <div class="col-4">
-                <h2>PLACEHOLDER FOR IMAGERY</h2>
+                <a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/"><img
+                        style="border:1px solid black;"
+                        src="static\images\AutoPanda.png" class="img-fluid"
+                        alt="Automation Panda link"></a>
+                <img class="mt-4"
+                     src="static\images\TestingArrangeExample.png"
+                     class="img-fluid"
+                     alt="Arrange ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <ul>
+                    <li class="mb-1"><b>ARRANGE</b> - sets up the test cases, assembling any required inputs and targets
+                    </li>
+                    <ul>
+                        <li class="mb-2">In the first code example image on the right, you can see an example of the
+                            Arrange step in my test code, where the tuple_list_1 and _2 are being populated for the
+                            tests
+                            to run with
+                        </li>
+                    </ul>
+                    <li class="mb-1"><b>ACT</b> - calling a function or method, interacting with a web page, etc. <i>Acting</i>
+                        on the target behavior that is being tested
+                    </li>
+                    <ul>
+                        <li class="mb-2">In the second code example on the right, you can see an example of Act. "result
+                            =
+                            Calculator.add(tuple_list_1())" is calling the function and populating an answer for the
+                            test to be
+                            ran against
+                        </li>
+                    </ul>
+                    <li class="mb-1"><b>ASSERT</b> - verify whether the test has passed or failed via the parameters
+                        that were expected. <i>Act</i> should elicit a response for the test
+                        to assess. <i>Assert</i> is then there to say "expected outcome received" or "expected outcome
+                        NOT received"
+                    </li>
+                    <ul>
+                        <li class="mb-2">In the 3rd code example to the right, you can see the assert statements for
+                            division and division by 0 error
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-4">
+                <img class="mt-3"
+                     src="static\images\TestingActExample.png" class="img-fluid"
+                     alt="Act ex">
+                <img class="mt-4"
+                     src="static\images\TestingAssertExample.png" class="img-fluid"
+                     alt="Assert ex">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10 mt-3">
+                <h3>Tutorial Steps for Creating AAA Test Cases</h3>
+                <ol>
+                    <li class="mb-2">Understand what it is that you are testing - the specific classes/methods/functions
+                        that
+                        need to be ensured as operative
+                    </li>
+                    <li>For <u>Pytest</u>, tests must be located in a file that ends in the nomenclature
+                        "_test.py" otherwise it will not work. An example from my code is "calculator_test.py" in the tests
+                        directory
+                    </li>
+                    <ul>
+                        <li class="mb-2">Additionally, test functions themselves must have "test_" at the beginning of their name
+                            so that Pytest knows to run them
+                        </li>
+                        <li class="mb-2">In the 2nd and 3rd code examples above and to the right, you can see that the tests
+                            are named "def test_calculator_add_method():" and "def test_calculator_operations_divide():"
+                            respectively
+                        </li>
+                    </ul>
+                    <li class="mb-2"><i>Arrange</i> any information that is needed for the test to work, such as the
+                        tuple_list_1 & _2 in the previous 1st code example, above and to the right
+                    </li>
+                    <li class="mb-2"><i>Act</i> on that information by calling the respective methods or functions that
+                        we will run the test against, such as the "result" property in the 2nd code example above
+                    </li>
+                    <li class="mb-4"><i>Assert</i> the test statement with the correct, expected outcome from the test
+                        so that pass or
+                        fail can be determined, like in the 3rd code example above and to the right for Division
+                    </li>
+                </ol>
             </div>
         </div>
         <div class="row mt-3">
